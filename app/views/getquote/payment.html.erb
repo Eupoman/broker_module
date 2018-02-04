@@ -1,0 +1,794 @@
+<!-- <link href="/assets/stylesheets/font-awesome.css" rel="stylesheet"> -->
+<link href="/assets/stylesheets/payment.css" rel="stylesheet" />
+<div class="container" style="margin-top: 50px;">
+    <div class="step" id="step4">
+        <div class="title">
+            <h1>Pago</h1>
+        </div>
+    </div>
+    <div class="content">
+        <div class="alert alert-info">
+            <div class="form">
+                <p class="control-label">
+                   Medio de pago
+               </p>
+                <label class="pagoradio">
+                    <input value="1" type="radio" name="pago">&nbsp;PAT - Pago automático con cargo en tarjeta de crédito
+                </label>
+                <label class="pagoradio">
+                    <input value="2" type="radio" name="pago">&nbsp;PAC Electrónico - Pago automático con cargo en cuenta corriente (requiere inscripción electrónica en el sitio web del banco)
+                </label>
+                <label class="pagoradio">
+                    <input value="3" type="radio" name="pago">&nbsp;Webpay - Pago anual a través de Webpay Plus
+                </label>
+            </div>
+        </div>
+        <div class="row">
+            <img class="img-responsive pull-right" src="http://i76.imgup.net/accepted_c22e0.png">
+        </div>
+        <div class="col-xs-10 col-sm-6 col-md-6 pagor1">
+            <br>
+            <label>Banco</label>
+            <select class="form-control">
+                <option disabled="" value=""></option>
+                <option value="1">ABN Amro Bank</option>
+                <option value="2">Banco Bice</option>
+                <option value="3">BBVA</option>
+                <option value="4">BCI</option>
+                <option value="5">Banco de Chile</option>
+                <option value="6">Banco de la Nación Argentina</option>
+                <option value="7">Banco Desarrollo</option>
+                <option value="8">BancoEstado</option>
+                <option value="9">Banco do Brasil</option>
+                <option value="10">Banco Falabella</option>
+                <option value="11">Banco Internacional</option>
+                <option value="12">Banco Itaú</option>
+                <option value="13">Banco Monex</option>
+                <option value="14">Banco París</option>
+                <option value="15">Banco Penta</option>
+                <option value="16">Banco Ripley</option>
+                <option value="17">Banco Santander</option>
+                <option value="18">Banco Security</option>
+                <option value="19">Bank of Tokyo-Mitsubishi</option>
+                <option value="20">Banco Edwards Citi</option>
+                <option value="21">Corpbanca</option>
+                <option value="22">Deutsche Bank</option>
+                <option value="23">HNS Banco</option>
+                <option value="24">HSBC Bank</option>
+                <option value="25">JP Morgan Chase Bank</option>
+                <option value="26">Scotiabank Sud Americano</option>
+            </select>
+        </div>
+        <div class="col-xs-10 col-sm-6 col-md-6 pagor1">
+            <br>
+            <label>CARD NUMBER</label>
+            <div class="input-group" style="margin-top: 0px;">
+                <input type="text" class="form-control" id="cardNumber" placeholder="Valid Card Number" required="">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+            </div>
+        </div>
+        <div class="col-xs-10 col-sm-6 col-md-6 pagor1 pagor2">
+            <br>
+            <label>Fecha de vencimiento</label>
+            <div class="col-xs-12 col-sm-6 col-md-6" style="margin-top: 0px;padding-left: 0px!important">
+                <select class="form-control">
+                    <option disabled="" value="">Mes</option>
+                    <option value="1">01</option>
+                    <option value="2">02</option>
+                    <option value="3">03</option>
+                    <option value="4">04</option>
+                    <option value="5">05</option>
+                    <option value="6">06</option>
+                    <option value="7">07</option>
+                    <option value="8">08</option>
+                    <option value="9">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6" style="margin-top: 0px;padding-left: 0px!important">
+                <select class="form-control">
+                    <option disabled="" value="">Año</option>
+                    <option value="2017">2017</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                    <option value="2026">2026</option>
+                    <option value="2027">2027</option>
+                    <option value="2028">2028</option>
+                    <option value="2029">2029</option>
+                    <option value="2030">2030</option>
+                    <option value="2031">2031</option>
+                    <option value="2032">2032</option>
+                    <option value="2033">2033</option>
+                    <option value="2034">2034</option>
+                    <option value="2035">2035</option>
+                    <option value="2036">2036</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-xs-10 col-sm-6 col-md-6 pagor1">
+            <br>
+            <div div class="col-xs-12 col-sm-6 col-md-6" style="margin-top: 0px !important;padding-left: 0px!important">
+                <label>Cuotas</label>
+                <div class="col-xs-12 col-sm-12 col-md-12" style="margin-top: 0px !important;padding-left: 0px!important">
+                    <select class="form-control">
+                        <option disabled="" value=""></option>
+                        <option value="1">01</option>
+                        <option value="2">02</option>
+                        <option value="3">03</option>
+                        <option value="4">04</option>
+                        <option value="5">05</option>
+                        <option value="6">06</option>
+                        <option value="7">07</option>
+                        <option value="8">08</option>
+                        <option value="9">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                </div>
+            </div>
+            <div div class="col-xs-12 col-sm-6 col-md-6" style="margin-top: 0px !important;padding-left: 0px !important;">
+                <label>Día de pago</label>
+                <div class="col-xs-12 col-sm-12 col-md-12" style="margin-top: 0px !important;padding-left: 0px!important">
+                    <select class="form-control">
+                        <option disabled="" value=""></option>
+                        <option value="15">15</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="alert alert-warning col-xs-12 vert-offset-top pagorr1" style="display: none">
+            <p class="control-label">
+          El cargo de la primera cuota se realizará en tu tarjeta de crédito en un plazo máximo de 72 horas hábiles, luego de que te enviemos el certificado de póliza.
+            </p>
+        </div>
+
+        <div class="alert alert-warning col-xs-12 vert-offset-top pagorr2" style="display: none">
+            <p class="control-label">
+            Recuerda inscribir el pago de cuenta automático en tu banco, utilizando el siguiente ID de venta: 270630
+            <br>
+            <br>
+            <a href="#">¿Cómo inscribo el PAC electrónico?</a>
+            <br>
+            <br>
+            El primer cobro del seguro se realizará en un <strong>máximo de 72 horas hábiles</strong>, luego de que te enviemos el certificado de póliza
+            </p>
+        </div>
+
+        <div class="alert alert-warning col-xs-12 vert-offset-top pagorr3" style="display: none">
+            <p class="control-label">
+          Una vez aprobada la inspección de tu vehículo, te enviaremos un correo con el link de pago que te llevará a Webpay. Desde este link existe la posibilidad de pagar en cuotas al seleccionar pago con tarjeta de crédito, o también podrás pagar el total del seguro utilizado Redcompra.
+            </p>
+        </div>
+    <br>
+    <form action="#" onsubmit="if(document.getElementById('agree').checked) { return true; } else { alert('Indique que ha leído y acepta los Términos y condiciones y la Política de privacidad'); return false; }">
+        <input type="checkbox" name="checkbox" style="margin-left: 20px;" value="check" id="agree" /> He leído y acepto los Términos y condiciones y la Política de privacidady
+        <input type="submit" class="continue" value="Pagar $6.698" />
+    </form>
+  </div>
+    <!-- <div class="col-md-8">
+        <input type="checkbox" name="check"style="margin-left: 20px;"><span for="check">&nbsp&nbspAceptar términos y condiciones</span>
+    </div>
+    <a class="continue" href="#">Continuar</a> -->
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.2/js/bootstrap-select.min.js"></script>
+<script type="text/javascript">
+    $(".pagoradio input").on('change', function() {
+        if($(this).val() == 1) {
+            $('.pagor1').css('display', 'block');
+            $('.pagorr1').css('display', 'block');
+            $('.pagorr2').css('display', 'none');
+            $('.pagorr3').css('display', 'none');
+        } else if($(this).val() == 2){
+            $('.pagor1').css('display', 'block');
+            $('.pagor2').css('display', 'none');
+            $('.pagorr1').css('display', 'none');
+            $('.pagorr2').css('display', 'block');
+            $('.pagorr3').css('display', 'none');
+        } else {
+            $('.pagor1').css('display', 'none');
+            $('.pagor2').css('display', 'none');
+            $('.pagorr1').css('display', 'none');
+            $('.pagorr2').css('display', 'none');
+            $('.pagorr3').css('display', 'block');
+        }
+    });
+    $('.selectpicker').selectpicker();
+</script>
+
+<!-- <link href="/assets/stylesheets/components.min.css" rel="stylesheet" id="style_components" type="text/css" />
+<link href="/assets/stylesheets/plugins.min.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+
+.form-wizard .steps>li>a.step:hover {
+ background: white;
+}
+
+#form_wizard_1 {
+    margin-top: 20px;
+}
+
+</style>
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>Lista de productos</h2>
+        <ol class="breadcrumb">
+            <li>
+                <a href="">Inicio</a>
+            </li>
+            <li>
+                <a>Consigue una cotización</a>
+            </li>
+            <li class="active">
+                <strong>Lista de productos</strong>
+            </li>
+        </ol>
+    </div>
+    <div class="col-lg-2">
+
+    </div>
+</div>
+<div class="portlet light bordered" id="form_wizard_1">
+    <div class="portlet-body form">
+        <form class="form-horizontal" action="#" id="submit_form" method="POST">
+            <div class="form-wizard">
+                <div class="form-body">
+                    <ul class="nav nav-pills nav-justified steps">
+                        <li>
+                            <a href="#tab1" data-toggle="tab" class="step">
+                                <span class="number"> 1 </span>
+                                <span class="desc">
+                                    <i class="fa fa-check"></i> Account Setup </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#tab2" data-toggle="tab" class="step">
+                                <span class="number"> 2 </span>
+                                <span class="desc">
+                                    <i class="fa fa-check"></i> Profile Setup </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#tab3" data-toggle="tab" class="step active">
+                                <span class="number"> 3 </span>
+                                <span class="desc">
+                                    <i class="fa fa-check"></i> Billing Setup </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#tab4" data-toggle="tab" class="step">
+                                <span class="number"> 4 </span>
+                                <span class="desc">
+                                    <i class="fa fa-check"></i> Confirm </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div id="bar" class="progress progress-striped" role="progressbar">
+                        <div class="progress-bar progress-bar-success"> </div>
+                    </div>
+                    <div class="tab-content">
+                        <div class="alert alert-danger display-none">
+                            <button class="close" data-dismiss="alert"></button> You have some form errors. Please check below. </div>
+                        <div class="alert alert-success display-none">
+                            <button class="close" data-dismiss="alert"></button> Your form validation is successful! </div>
+                        <div class="tab-pane active" id="tab1">
+                            <h3 class="block">Residence address</h3>
+                            <div class="form-group">
+                                <label class="control-label col-md-3">Username
+                                    <span class="required"> * </span>
+                                </label>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control" name="street" />
+                                    <span class="help-block"> Provide your Street </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3">Number
+                                    <span class="required"> * </span>
+                                </label>
+                                <div class="col-md-4">
+                                    <input type="password" class="form-control" name="password" id="submit_form_password" />
+                                    <span class="help-block"> Provide your password. </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3">Confirm Password
+                                    <span class="required"> * </span>
+                                </label>
+                                <div class="col-md-4">
+                                    <input type="password" class="form-control" name="rpassword" />
+                                    <span class="help-block"> Confirm your password </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3">Email
+                                    <span class="required"> * </span>
+                                </label>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control" name="email" />
+                                    <span class="help-block"> Provide your email address </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="tab2">
+                            <h3 class="block">Provide your profile details</h3>
+                            <div class="form-group">
+                                <label class="control-label col-md-3">Fullname
+                                    <span class="required"> * </span>
+                                </label>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control" name="fullname" />
+                                    <span class="help-block"> Provide your fullname </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3">Phone Number
+                                    <span class="required"> * </span>
+                                </label>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control" name="phone" />
+                                    <span class="help-block"> Provide your phone number </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3">Gender
+                                    <span class="required"> * </span>
+                                </label>
+                                <div class="col-md-4">
+                                    <div class="radio-list">
+                                        <label>
+                                            <input type="radio" name="gender" value="M" data-title="Male" /> Male </label>
+                                        <label>
+                                            <input type="radio" name="gender" value="F" data-title="Female" /> Female </label>
+                                    </div>
+                                    <div id="form_gender_error"> </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3">Address
+                                    <span class="required"> * </span>
+                                </label>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control" name="address" />
+                                    <span class="help-block"> Provide your street address </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3">City/Town
+                                    <span class="required"> * </span>
+                                </label>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control" name="city" />
+                                    <span class="help-block"> Provide your city or town </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3">Country</label>
+                                <div class="col-md-4">
+                                    <select name="country" id="country_list" class="form-control">
+                                        <option value=""></option>
+                                        <option value="AF">Afghanistan</option>
+                                        <option value="AL">Albania</option>
+                                        <option value="DZ">Algeria</option>
+                                        <option value="AS">American Samoa</option>
+                                        <option value="AD">Andorra</option>
+                                        <option value="AO">Angola</option>
+                                        <option value="AI">Anguilla</option>
+                                        <option value="AR">Argentina</option>
+                                        <option value="AM">Armenia</option>
+                                        <option value="AW">Aruba</option>
+                                        <option value="AU">Australia</option>
+                                        <option value="AT">Austria</option>
+                                        <option value="AZ">Azerbaijan</option>
+                                        <option value="BS">Bahamas</option>
+                                        <option value="BH">Bahrain</option>
+                                        <option value="BD">Bangladesh</option>
+                                        <option value="BB">Barbados</option>
+                                        <option value="BY">Belarus</option>
+                                        <option value="BE">Belgium</option>
+                                        <option value="BZ">Belize</option>
+                                        <option value="BJ">Benin</option>
+                                        <option value="BM">Bermuda</option>
+                                        <option value="BT">Bhutan</option>
+                                        <option value="BO">Bolivia</option>
+                                        <option value="BA">Bosnia and Herzegowina</option>
+                                        <option value="BW">Botswana</option>
+                                        <option value="BV">Bouvet Island</option>
+                                        <option value="BR">Brazil</option>
+                                        <option value="IO">British Indian Ocean Territory</option>
+                                        <option value="BN">Brunei Darussalam</option>
+                                        <option value="BG">Bulgaria</option>
+                                        <option value="BF">Burkina Faso</option>
+                                        <option value="BI">Burundi</option>
+                                        <option value="KH">Cambodia</option>
+                                        <option value="CM">Cameroon</option>
+                                        <option value="CA">Canada</option>
+                                        <option value="CV">Cape Verde</option>
+                                        <option value="KY">Cayman Islands</option>
+                                        <option value="CF">Central African Republic</option>
+                                        <option value="TD">Chad</option>
+                                        <option value="CL">Chile</option>
+                                        <option value="CN">China</option>
+                                        <option value="CX">Christmas Island</option>
+                                        <option value="CC">Cocos (Keeling) Islands</option>
+                                        <option value="CO">Colombia</option>
+                                        <option value="KM">Comoros</option>
+                                        <option value="CG">Congo</option>
+                                        <option value="CD">Congo, the Democratic Republic of the</option>
+                                        <option value="CK">Cook Islands</option>
+                                        <option value="CR">Costa Rica</option>
+                                        <option value="CI">Cote d'Ivoire</option>
+                                        <option value="HR">Croatia (Hrvatska)</option>
+                                        <option value="CU">Cuba</option>
+                                        <option value="CY">Cyprus</option>
+                                        <option value="CZ">Czech Republic</option>
+                                        <option value="DK">Denmark</option>
+                                        <option value="DJ">Djibouti</option>
+                                        <option value="DM">Dominica</option>
+                                        <option value="DO">Dominican Republic</option>
+                                        <option value="EC">Ecuador</option>
+                                        <option value="EG">Egypt</option>
+                                        <option value="SV">El Salvador</option>
+                                        <option value="GQ">Equatorial Guinea</option>
+                                        <option value="ER">Eritrea</option>
+                                        <option value="EE">Estonia</option>
+                                        <option value="ET">Ethiopia</option>
+                                        <option value="FK">Falkland Islands (Malvinas)</option>
+                                        <option value="FO">Faroe Islands</option>
+                                        <option value="FJ">Fiji</option>
+                                        <option value="FI">Finland</option>
+                                        <option value="FR">France</option>
+                                        <option value="GF">French Guiana</option>
+                                        <option value="PF">French Polynesia</option>
+                                        <option value="TF">French Southern Territories</option>
+                                        <option value="GA">Gabon</option>
+                                        <option value="GM">Gambia</option>
+                                        <option value="GE">Georgia</option>
+                                        <option value="DE">Germany</option>
+                                        <option value="GH">Ghana</option>
+                                        <option value="GI">Gibraltar</option>
+                                        <option value="GR">Greece</option>
+                                        <option value="GL">Greenland</option>
+                                        <option value="GD">Grenada</option>
+                                        <option value="GP">Guadeloupe</option>
+                                        <option value="GU">Guam</option>
+                                        <option value="GT">Guatemala</option>
+                                        <option value="GN">Guinea</option>
+                                        <option value="GW">Guinea-Bissau</option>
+                                        <option value="GY">Guyana</option>
+                                        <option value="HT">Haiti</option>
+                                        <option value="HM">Heard and Mc Donald Islands</option>
+                                        <option value="VA">Holy See (Vatican City State)</option>
+                                        <option value="HN">Honduras</option>
+                                        <option value="HK">Hong Kong</option>
+                                        <option value="HU">Hungary</option>
+                                        <option value="IS">Iceland</option>
+                                        <option value="IN">India</option>
+                                        <option value="ID">Indonesia</option>
+                                        <option value="IR">Iran (Islamic Republic of)</option>
+                                        <option value="IQ">Iraq</option>
+                                        <option value="IE">Ireland</option>
+                                        <option value="IL">Israel</option>
+                                        <option value="IT">Italy</option>
+                                        <option value="JM">Jamaica</option>
+                                        <option value="JP">Japan</option>
+                                        <option value="JO">Jordan</option>
+                                        <option value="KZ">Kazakhstan</option>
+                                        <option value="KE">Kenya</option>
+                                        <option value="KI">Kiribati</option>
+                                        <option value="KP">Korea, Democratic People's Republic of</option>
+                                        <option value="KR">Korea, Republic of</option>
+                                        <option value="KW">Kuwait</option>
+                                        <option value="KG">Kyrgyzstan</option>
+                                        <option value="LA">Lao People's Democratic Republic</option>
+                                        <option value="LV">Latvia</option>
+                                        <option value="LB">Lebanon</option>
+                                        <option value="LS">Lesotho</option>
+                                        <option value="LR">Liberia</option>
+                                        <option value="LY">Libyan Arab Jamahiriya</option>
+                                        <option value="LI">Liechtenstein</option>
+                                        <option value="LT">Lithuania</option>
+                                        <option value="LU">Luxembourg</option>
+                                        <option value="MO">Macau</option>
+                                        <option value="MK">Macedonia, The Former Yugoslav Republic of</option>
+                                        <option value="MG">Madagascar</option>
+                                        <option value="MW">Malawi</option>
+                                        <option value="MY">Malaysia</option>
+                                        <option value="MV">Maldives</option>
+                                        <option value="ML">Mali</option>
+                                        <option value="MT">Malta</option>
+                                        <option value="MH">Marshall Islands</option>
+                                        <option value="MQ">Martinique</option>
+                                        <option value="MR">Mauritania</option>
+                                        <option value="MU">Mauritius</option>
+                                        <option value="YT">Mayotte</option>
+                                        <option value="MX">Mexico</option>
+                                        <option value="FM">Micronesia, Federated States of</option>
+                                        <option value="MD">Moldova, Republic of</option>
+                                        <option value="MC">Monaco</option>
+                                        <option value="MN">Mongolia</option>
+                                        <option value="MS">Montserrat</option>
+                                        <option value="MA">Morocco</option>
+                                        <option value="MZ">Mozambique</option>
+                                        <option value="MM">Myanmar</option>
+                                        <option value="NA">Namibia</option>
+                                        <option value="NR">Nauru</option>
+                                        <option value="NP">Nepal</option>
+                                        <option value="NL">Netherlands</option>
+                                        <option value="AN">Netherlands Antilles</option>
+                                        <option value="NC">New Caledonia</option>
+                                        <option value="NZ">New Zealand</option>
+                                        <option value="NI">Nicaragua</option>
+                                        <option value="NE">Niger</option>
+                                        <option value="NG">Nigeria</option>
+                                        <option value="NU">Niue</option>
+                                        <option value="NF">Norfolk Island</option>
+                                        <option value="MP">Northern Mariana Islands</option>
+                                        <option value="NO">Norway</option>
+                                        <option value="OM">Oman</option>
+                                        <option value="PK">Pakistan</option>
+                                        <option value="PW">Palau</option>
+                                        <option value="PA">Panama</option>
+                                        <option value="PG">Papua New Guinea</option>
+                                        <option value="PY">Paraguay</option>
+                                        <option value="PE">Peru</option>
+                                        <option value="PH">Philippines</option>
+                                        <option value="PN">Pitcairn</option>
+                                        <option value="PL">Poland</option>
+                                        <option value="PT">Portugal</option>
+                                        <option value="PR">Puerto Rico</option>
+                                        <option value="QA">Qatar</option>
+                                        <option value="RE">Reunion</option>
+                                        <option value="RO">Romania</option>
+                                        <option value="RU">Russian Federation</option>
+                                        <option value="RW">Rwanda</option>
+                                        <option value="KN">Saint Kitts and Nevis</option>
+                                        <option value="LC">Saint LUCIA</option>
+                                        <option value="VC">Saint Vincent and the Grenadines</option>
+                                        <option value="WS">Samoa</option>
+                                        <option value="SM">San Marino</option>
+                                        <option value="ST">Sao Tome and Principe</option>
+                                        <option value="SA">Saudi Arabia</option>
+                                        <option value="SN">Senegal</option>
+                                        <option value="SC">Seychelles</option>
+                                        <option value="SL">Sierra Leone</option>
+                                        <option value="SG">Singapore</option>
+                                        <option value="SK">Slovakia (Slovak Republic)</option>
+                                        <option value="SI">Slovenia</option>
+                                        <option value="SB">Solomon Islands</option>
+                                        <option value="SO">Somalia</option>
+                                        <option value="ZA">South Africa</option>
+                                        <option value="GS">South Georgia and the South Sandwich Islands</option>
+                                        <option value="ES">Spain</option>
+                                        <option value="LK">Sri Lanka</option>
+                                        <option value="SH">St. Helena</option>
+                                        <option value="PM">St. Pierre and Miquelon</option>
+                                        <option value="SD">Sudan</option>
+                                        <option value="SR">Suriname</option>
+                                        <option value="SJ">Svalbard and Jan Mayen Islands</option>
+                                        <option value="SZ">Swaziland</option>
+                                        <option value="SE">Sweden</option>
+                                        <option value="CH">Switzerland</option>
+                                        <option value="SY">Syrian Arab Republic</option>
+                                        <option value="TW">Taiwan, Province of China</option>
+                                        <option value="TJ">Tajikistan</option>
+                                        <option value="TZ">Tanzania, United Republic of</option>
+                                        <option value="TH">Thailand</option>
+                                        <option value="TG">Togo</option>
+                                        <option value="TK">Tokelau</option>
+                                        <option value="TO">Tonga</option>
+                                        <option value="TT">Trinidad and Tobago</option>
+                                        <option value="TN">Tunisia</option>
+                                        <option value="TR">Turkey</option>
+                                        <option value="TM">Turkmenistan</option>
+                                        <option value="TC">Turks and Caicos Islands</option>
+                                        <option value="TV">Tuvalu</option>
+                                        <option value="UG">Uganda</option>
+                                        <option value="UA">Ukraine</option>
+                                        <option value="AE">United Arab Emirates</option>
+                                        <option value="GB">United Kingdom</option>
+                                        <option value="US">United States</option>
+                                        <option value="UM">United States Minor Outlying Islands</option>
+                                        <option value="UY">Uruguay</option>
+                                        <option value="UZ">Uzbekistan</option>
+                                        <option value="VU">Vanuatu</option>
+                                        <option value="VE">Venezuela</option>
+                                        <option value="VN">Viet Nam</option>
+                                        <option value="VG">Virgin Islands (British)</option>
+                                        <option value="VI">Virgin Islands (U.S.)</option>
+                                        <option value="WF">Wallis and Futuna Islands</option>
+                                        <option value="EH">Western Sahara</option>
+                                        <option value="YE">Yemen</option>
+                                        <option value="ZM">Zambia</option>
+                                        <option value="ZW">Zimbabwe</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3">Remarks</label>
+                                <div class="col-md-4">
+                                    <textarea class="form-control" rows="3" name="remarks"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="tab3">
+                            <h3 class="block">Provide your billing and credit card details</h3>
+                            <div class="form-group">
+                                <label class="control-label col-md-3">Card Holder Name
+                                    <span class="required"> * </span>
+                                </label>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control" name="card_name" />
+                                    <span class="help-block"> </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3">Card Number
+                                    <span class="required"> * </span>
+                                </label>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control" name="card_number" />
+                                    <span class="help-block"> </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3">CVC
+                                    <span class="required"> * </span>
+                                </label>
+                                <div class="col-md-4">
+                                    <input type="text" placeholder="" class="form-control" name="card_cvc" />
+                                    <span class="help-block"> </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3">Expiration(MM/YYYY)
+                                    <span class="required"> * </span>
+                                </label>
+                                <div class="col-md-4">
+                                    <input type="text" placeholder="MM/YYYY" maxlength="7" class="form-control" name="card_expiry_date" />
+                                    <span class="help-block"> e.g 11/2020 </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3">Payment Options
+                                    <span class="required"> * </span>
+                                </label>
+                                <div class="col-md-4">
+                                    <div class="checkbox-list">
+                                        <label>
+                                            <input type="checkbox" name="payment[]" value="1" data-title="Auto-Pay with this Credit Card." /> Auto-Pay with this Credit Card </label>
+                                        <label>
+                                            <input type="checkbox" name="payment[]" value="2" data-title="Email me monthly billing." /> Email me monthly billing </label>
+                                    </div>
+                                    <div id="form_payment_error"> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="tab4">
+                            <h3 class="block">Confirm your account</h3>
+                            <h4 class="form-section">Account</h4>
+                            <div class="form-group">
+                                <label class="control-label col-md-3">Username:</label>
+                                <div class="col-md-4">
+                                    <p class="form-control-static" data-display="username"> </p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3">Email:</label>
+                                <div class="col-md-4">
+                                    <p class="form-control-static" data-display="email"> </p>
+                                </div>
+                            </div>
+                            <h4 class="form-section">Profile</h4>
+                            <div class="form-group">
+                                <label class="control-label col-md-3">Fullname:</label>
+                                <div class="col-md-4">
+                                    <p class="form-control-static" data-display="fullname"> </p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3">Gender:</label>
+                                <div class="col-md-4">
+                                    <p class="form-control-static" data-display="gender"> </p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3">Phone:</label>
+                                <div class="col-md-4">
+                                    <p class="form-control-static" data-display="phone"> </p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3">Address:</label>
+                                <div class="col-md-4">
+                                    <p class="form-control-static" data-display="address"> </p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3">City/Town:</label>
+                                <div class="col-md-4">
+                                    <p class="form-control-static" data-display="city"> </p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3">Country:</label>
+                                <div class="col-md-4">
+                                    <p class="form-control-static" data-display="country"> </p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3">Remarks:</label>
+                                <div class="col-md-4">
+                                    <p class="form-control-static" data-display="remarks"> </p>
+                                </div>
+                            </div>
+                            <h4 class="form-section">Billing</h4>
+                            <div class="form-group">
+                                <label class="control-label col-md-3">Card Holder Name:</label>
+                                <div class="col-md-4">
+                                    <p class="form-control-static" data-display="card_name"> </p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3">Card Number:</label>
+                                <div class="col-md-4">
+                                    <p class="form-control-static" data-display="card_number"> </p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3">CVC:</label>
+                                <div class="col-md-4">
+                                    <p class="form-control-static" data-display="card_cvc"> </p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3">Expiration:</label>
+                                <div class="col-md-4">
+                                    <p class="form-control-static" data-display="card_expiry_date"> </p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3">Payment Options:</label>
+                                <div class="col-md-4">
+                                    <p class="form-control-static" data-display="payment[]"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <div class="row">
+                        <div class="col-md-offset-3 col-md-9">
+                            <a href="javascript:;" class="btn default button-previous">
+                                <i class="fa fa-angle-left"></i> Back </a>
+                            <a href="javascript:;" class="btn btn-outline green button-next"> Continue
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                            <a href="javascript:;" class="btn green button-submit"> Submit
+                                <i class="fa fa-check"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="/assets/plugins/select2/js/select2.full.min.js" type="text/javascript"></script>
+<script src="/assets/plugins/jquery-validation/js/jquery.validate.min.js" type="text/javascript"></script>
+<script src="/assets/plugins/jquery-validation/js/additional-methods.min.js" type="text/javascript"></script>
+<script src="/assets/plugins/bootstrap-wizard/jquery.bootstrap.wizard.min.js" type="text/javascript"></script>        
+<script src="/assets/pages/scripts/form-wizard.js" type="text/javascript"></script>
+ -->

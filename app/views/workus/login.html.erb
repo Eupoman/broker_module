@@ -1,0 +1,71 @@
+<style type="text/css">
+    body::after{
+        background-image: url('/assets/images/logportal/2.png');
+        content: "";
+        opacity: 0.5;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: -1;
+        background-size: cover;  
+    }
+</style>
+<div class="middle-box text-center loginscreen  animated fadeInDown">
+    <div>
+        <div style="padding-top: 100px;">
+            <img src="/assets/img/logoHR.png" style="width: 100%;" />
+        </div>
+        <h3>Bienvenido a Trabaja con nosotros</h3>
+    </div>
+</div>
+
+<div class="loginColumns animated fadeInDown">
+    <div class="row">
+
+        <div class="col-md-6">
+            <h2 class="font-bold">Añadir información</h2>
+
+            <button  class="btn btn-default btn-w-m  full-width m-b">Adjuntar documento de identidad</button>
+            <button  class="btn btn-default btn-w-m  full-width m-b">Adjuntar certificado de antecedentes</button>
+            <button  class="btn btn-default btn-w-m  full-width m-b"><i class="fa fa-download"></i>&nbsp;&nbsp;Descargar Mandate</button>
+            <button  class="btn btn-default btn-w-m  full-width m-b">Adjuntar Mandato</button>
+
+        </div>
+        <div class="col-md-6">
+            <div class="ibox-content">
+                <form class="m-t" role="form" action="/dashboard/index">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Nombre Completo" required="">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Correo Electrónico" required="">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="RUT" required="">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Número de Teléfono" required="">
+                    </div>
+                    <button type="submit" class="btn btn-primary block full-width m-b">Entrar</button>
+                    <a href="/user/forgot_password"><small>Se te olvidó tu contraseña?</small></a>
+                </form>
+                <p class="m-t">
+                    <small>Espacio Seguro &copy; 2017</small>
+                </p>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col-md-6">
+            Copyright Example Company
+        </div>
+        <div class="col-md-6 text-right">
+            <small>© 2017</small>
+        </div>
+    </div>
+</div>
+
+

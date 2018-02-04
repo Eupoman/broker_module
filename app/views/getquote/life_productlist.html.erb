@@ -1,0 +1,224 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>Lista de productos</h2>
+        <ol class="breadcrumb">
+            <li>
+                <a href="">Inicio</a>
+            </li>
+            <li>
+                <a>Consigue una cotización</a>
+            </li>
+            <li class="active">
+                <strong>Lista de auto productos</strong>
+            </li>
+        </ol>
+    </div>
+    <div class="col-lg-2">
+
+    </div>
+</div>
+<div class="wrapper wrapper-content animated fadeInRight ecommerce">
+
+
+<div class="ibox-content m-b-sm border-bottom">
+    <div class="row">
+        <div class="col-sm-1">
+            <div class="form-group">
+                <label class="control-label" for="price">Precio</label>
+                <!-- <input type="text" id="price" name="price" value="" placeholder="Price" class="form-control">
+                <label for="dollar-prefix">Money with $ prefix</label> -->
+                <input type="text" class="form-control dollar-prefix" aria-describedby="basic-addon1">
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label class="control-label">Seleccionar Empresas</label>
+                <div>
+                    <select data-placeholder="Seleccionar Empresas..." class="chosen-select" multiple>
+                        <option value="0">Liberty</option>
+                        <option value="1">Mapre</option>
+                        <option value="2">HDI Seguros</option>
+                        <option value="3">BCI Insurance</option>
+                        <option value="4">Chilean Consolidated</option>
+                        <option value="5">Consortium</option>
+                        <option value="6">Zenit Seguros</option>
+                        <option value="7">Seguros SURA</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox">
+            <div class="ibox-content">
+
+                <table class="footable table table-stripped toggle-arrow-tiny" data-page-size="15">
+                    <thead>
+                    <tr>
+                        <th data-hide="phone">Aseguradoras</th>
+                        <th data-hide="phone">Prima Mensual</th>
+                        <th data-hide="phone" >Capital Asegurado</th>
+                        <th data-hide="phone" >Monto Bonificación</th>
+                        <th data-hide="phone,tablet" >Años de bonificación</th>
+                        <th class="text-right" data-sort-ignore="true"></th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                               BCI Seguros
+                            </td>
+                            <td>
+                               $10.790 /MES 0,4 UF
+                            </td>
+                            <td>
+                                500 UF
+                            </td>
+                            <td>
+                                $192.900 7,2 UF
+                            </td>
+                            <td>
+                                3
+                            </td>
+                            <td class="text-right">
+                                <div class="btn-group">
+                                    <button class="btn-danger btn btn-xs buy">Contratar</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                               Liberty
+                            </td>
+                            <td>
+                               $19.090 /MES 0,71 UF
+                            </td>
+                            <td>
+                                1000 UF
+                            </td>
+                            <td>
+                                $342.400 12,78 UF
+                            </td>
+                            <td>
+                                3
+                            </td>
+                            <td class="text-right">
+                                <div class="btn-group">
+                                    <button class="btn-danger btn btn-xs buy">Contratar</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                               HDI Seguros
+                            </td>
+                            <td>
+                               $11.590 /MES 0,43 UF
+                            </td>
+                            <td>
+                                500 UF
+                            </td>
+                            <td>
+                                $483.900 18,06 UF
+                            </td>
+                            <td>
+                                5
+                            </td>
+                            <td class="text-right">
+                                <div class="btn-group">
+                                    <button class="btn-danger btn btn-xs buy">Contratar</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                               Mapre
+                            </td>
+                            <td>
+                               $22.790 /MES 0,85 UF
+                            </td>
+                            <td>
+                                1200 UF
+                            </td>
+                            <td>
+                                $956.700 35,7 UF
+                            </td>
+                            <td>
+                                5
+                            </td>
+                            <td class="text-right">
+                                <div class="btn-group">
+                                    <button class="btn-danger btn btn-xs buy">Contratar</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                               Mapre
+                            </td>
+                            <td>
+                               $56.290 /MES 2,1 UF
+                            </td>
+                            <td>
+                                3000 UF
+                            </td>
+                            <td>
+                                $2.363.600 88,2 UF
+                            </td>
+                            <td>
+                                5
+                            </td>
+                            <td class="text-right">
+                                <div class="btn-group">
+                                    <button class="btn-danger btn btn-xs buy">Contratar</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <td colspan="6">
+                            <ul class="pagination pull-right"></ul>
+                        </td>
+                    </tr>
+                    </tfoot>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div>
+
+<% content_for :javascript do %>
+<script type="text/javascript" src="/assets/javascripts/cleave.min.js"></script>
+<script type="text/javascript">
+
+
+$(function() {
+
+    $('.footable').footable();
+
+});
+
+$('.chosen-select').chosen({width: "100%"});
+
+$('.buy').on('click', function() {
+    window.location.href = "/getquote/payment";
+});
+
+new Cleave('.dollar-prefix', {
+    prefix: '$',
+    numeral: true,
+    numeralThousandsGroupStyle: 'thousand'
+});
+
+</script>
+<% end %>

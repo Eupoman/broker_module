@@ -1,0 +1,1494 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>Consigue una cotización</h2>
+
+            <ol class="breadcrumb">
+                <li>
+                    <a href="<%= url_for :controller => 'dashboard', :action => 'index' %>">Inicio</a>
+            </li>
+            <li class="active">
+               <strong><a>Consigue una cotización</a></strong>
+            </li>
+        </ol>
+    </div>
+    <div class="col-lg-2">
+
+    </div>
+</div>
+<link rel="stylesheet" type="text/css" href="/assets/stylesheets/quote/quote.css">
+<style type="text/css">
+	.search-field {
+		height: 32px;
+	}
+</style>
+<!-- <link rel="stylesheet" type="text/css" href="/assets/stylesheets/quote/bootstrap-datepicker3.min.css"> -->
+<link rel="stylesheet" type="text/css" href="/assets/stylesheets/plugins.min.css">
+<link rel="stylesheet" type="text/css" href="/assets/stylesheets/bootstrap-slider.min.css">
+<div class="tab_container">
+	<input id="tab1" type="radio" name="tabs" checked>
+	<label for="tab1"><i class="fa fa-car"></i><span>Auto</span></label>
+
+	<input id="tab2" type="radio" name="tabs">
+	<label for="tab2"><i class="fa fa-pencil-square-o"></i><span>Viajar</span></label>
+
+	<input id="tab3" type="radio" name="tabs">
+	<label for="tab3"><i class="fa fa-home"></i><span>Casa</span></label>
+
+	<input id="tab4" type="radio" name="tabs">
+	<label for="tab4"><i class="fa fa-credit-card-alt"></i><span>RCP</span></label>
+
+	<input id="tab5" type="radio" name="tabs">
+	<label for="tab5"><i class="fa fa-heart"></i><span>SOAP</span></label>
+
+	<input id="tab6" type="radio" name="tabs">
+	<label for="tab6"><i class="fa fa-usd"></i><span>Vida</span></label>
+
+	<input id="tab7" type="radio" name="tabs">
+	<label for="tab7"><i class="fa fa-motorcycle"></i><span>Motocicleta</span></label>
+
+	<!-- <input id="tab8" type="radio" name="tabs">
+	<label for="tab8"><i class="fa fa-building"></i><span>Condominio</span></label> -->
+
+	<section id="content1" class="tab-content">
+		<center>
+			<form action="/getquote/auto"   role="form" data-toggle="validator" class="quoteform">
+			<div class="form-row">
+			  <div class="form-group col-md-4">
+			    <label for="inputName">Nombres</label>
+			    <input type="name" class="form-control" id="inputName" placeholder="Nombres" required>
+			  </div>
+			  <div class="form-group col-md-4">
+			    <label for="firstname">Apellido paterno</label>
+			    <input type="text" class="form-control" id="firstname" placeholder="Apellido paterno" required>
+			  </div>
+			  <div class="form-group col-md-4">
+			    <label for="lastname">Apellido materno</label>
+			    <input type="text" class="form-control" id="lastname" placeholder="Apellido materno" required>
+			  </div>
+			  <div class="form-group col-md-4">
+			    <label for="telnumber">Número de teléfono</label>
+			    <input type="text" class="form-control telnumber" id="telnumber" placeholder="Número de teléfono" required>
+			  </div>
+			  <div class="form-group col-md-4">
+			    <label for="inputEmail4">Correo</label>
+			    <input type="email" class="form-control" id="inputEmail4" placeholder="Correo" required>
+			  </div>
+			</div>
+			<div class="form-row">
+			  <div class="form-group col-md-4">
+			    <label for="brand">Marca de auto</label>
+			    <select id="brand" class="form-control" required>
+					<option value="-">Marca del auto</option>
+					<option value="1">ACADIAN</option>
+					<option value="2">ACURA</option>
+					<option value="3">ALFA ROMEO</option>
+					<option value="4">ASIA MOTORS</option>
+					<option value="5">AUDI</option>
+					<option value="6">BAIC</option>
+					<option value="7">BAW</option>
+					<option value="8">BMW</option>
+					<option value="9">BRILLIANCE</option>
+					<option value="10">BYD</option>
+					<option value="12">CHANGAN</option>
+					<option value="13">CHANGHE</option>
+					<option value="14">CHERY</option>
+					<option value="15">CHEVROLET</option>
+					<option value="16">CHRYSLER</option>
+					<option value="17">CITROEN</option>
+					<option value="18">DAEWOO</option>
+					<option value="19">DAIHATSU</option>
+					<option value="20">DFSK/DFM</option>
+					<option value="21">DODGE</option>
+					<option value="22">DONGFENG</option>
+					<option value="23">FAW</option>
+					<option value="24">FIAT</option>
+					<option value="25">FORD</option>
+					<option value="26">FOTON</option>
+					<option value="27">GAC MOTOR</option>
+					<option value="28">GEELY</option>
+					<option value="29">GREAT WALL</option>
+					<option value="30">HAFEI</option>
+					<option value="31">HAIMA</option>
+					<option value="32">HAVAL</option>
+					<option value="33">HONDA</option>
+					<option value="34">HYUNDAI</option>
+					<option value="35">NFINITI</option>
+					<option value="36">ISUZU</option>
+					<option value="37">JAC</option>
+					<option value="38">JAGUAR</option>
+					<option value="39">JEEP</option>
+					<option value="40">JINBEI</option>
+					<option value="41">KIA</option>
+					<option value="42">LANCIA</option>
+					<option value="43">LAND ROVER</option>
+					<option value="44">LEXUS</option>
+					<option value="45">LIFAN</option>
+					<option value="46">MAHINDRA</option>
+					<option value="47">MAZDA</option>
+					<option value="48">MERCEDES BENZ</option>
+					<option value="49">MG</option>
+					<option value="50">MINI</option>
+					<option value="51">MITSUBISHI</option>
+					<option value="52">NISSAN</option>
+					<option value="53">OPEL</option>
+					<option value="54">PEUGEOT</option>
+					<option value="55">PLYMOUTH</option>
+					<option value="56">PORSCHE</option>
+					<option value="57">PROTON</option>
+					<option value="58">RENAULT</option>
+					<option value="59">ROVER</option>
+					<option value="60">SAMSUNG</option>
+					<option value="61">SEAT</option>
+					<option value="62">SKODA</option>
+					<option value="63">SMA</option>
+					<option value="64">SSANGYONG</option>
+					<option value="65">SUBARU</option>
+					<option value="66">SUZUKI</option>
+					<option value="67">TATA</option>
+					<option value="68">TOYOTA</option>
+					<option value="69">VOLKSWAGEN</option>
+					<option value="70">VOLVO</option>
+					<option value="71">ZOTYE</option>
+					<option value="72">ZX AUTO</option>
+            	</select>
+			  </div>
+			  <div class="form-group col-md-4">
+			    <label for="carmodel">Modelo de coche</label>
+			    <select id="carmodel" class="form-control" required>
+			      <option selected>Choose...</option>
+			      <option value="-">Modelo del auto</option>
+	                <option value="1">GMC</option>
+	                <option value="2">MDX</option>
+	                <option value="2">ZDX</option>
+	                <option value="3">147</option>
+			    </select>
+			  </div>
+
+			  <div class="form-group col-md-4">
+			    <label for="registeryear">Año de registro</label>
+			    <select name="Registration year" class="form-control" required>
+                    <option value="-">Año de registro</option>
+                    <option value="2015">2017</option>
+                    <option value="2014">2016</option>
+                    <option value="2015">2015</option>
+                    <option value="2014">2014</option>
+                    <option value="2013">2013</option>
+                    <option value="2012">2012</option>
+                    <option value="2011">2011</option>
+                    <option value="2010">2010</option>
+                    <option value="2009">2009</option>
+                    <option value="2008">2008</option>
+                    <option value="2007">2007</option>
+                    <option value="2006">2006</option>
+                    <option value="2005">2005</option>
+                    <option value="2004">2004</option>
+                    <option value="2003">2003</option>
+                    <option value="2002">2002</option>
+                    <option value="2001">2001</option>
+                    <option value="2000">2000</option>
+                    <option value="1999">1999</option>
+                    <option value="1998">1998</option>
+                    <option value="1997">1997</option>
+                    <option value="1996">1996</option>
+                    <option value="1995">1995</option>
+                    <option value="1994">1994</option>
+                    <option value="1993">1993</option>
+                    <option value="1992">1992</option>
+                    <option value="1991">1991</option>
+                    <option value="1990">1990</option>
+                    <option value="1989">1989</option>
+                    <option value="1988">1988</option>
+                    <option value="1987">1987</option>
+                    <option value="1986">1986</option>
+                    <option value="1985">1985</option>
+                    <option value="1984">1984</option>
+                    <option value="1983">1983</option>
+                    <option value="1982">1982</option>
+                    <option value="1981">1981</option>
+                    <option value="1980">1980</option>
+                    <option value="1979">1979</option>
+                    <option value="1978">1978</option>
+                    <option value="1977">1977</option>
+                    <option value="1976">1976</option>
+                    <option value="1975">1975</option>
+                    <option value="1974">1974</option>
+                    <option value="1973">1973</option>
+                    <option value="1972">1972</option>
+                    <option value="1971">1971</option>
+                    <option value="1970">1970</option>
+                    <option value="1969">1969</option>
+                    <option value="1968">1968</option>
+                    <option value="1967">1967</option>
+                    <option value="1966">1966</option>
+                    <option value="1965">1965</option>
+                    <option value="1964">1964</option>
+                    <option value="1963">1963</option>
+                    <option value="1962">1962</option>
+                    <option value="1961">1961</option>
+                    <option value="1960">1960</option>
+                    <option value="1959">1959</option>
+                    <option value="1958">1958</option>
+                    <option value="1957">1957</option>
+                    <option value="1956">1956</option>
+                    <option value="1955">1955</option>
+                    <option value="1954">1954</option>
+                    <option value="1953">1953</option>
+                    <option value="1952">1952</option>
+                    <option value="1951">1951</option>
+                    <option value="1950">1950</option>
+                </select>
+			  </div>
+			  <div class="form-group col-md-4">
+			    <label for="Tipo de vehiculo">Tipo de vehiculo</label>
+			    <select name="vehicle type" class="form-control" required>
+                    <option value="-">Tipo de vehiculo</option>
+                    <option value="1">Automóvil</opiton>
+                    <option value="2">Camioneta</opiton>
+                    <option value="3">Furgon</opiton>
+                    <option value="4">Jeep</opiton>
+                    <option value="5">Minibus</opiton>
+                    <option value="6">Station Wagon</opiton>
+                    <option value="7">Van</opiton>
+                </select>
+			  </div>
+			</div>
+			<button type="submit" class="btn btn-info">Ir al paso 2</button>
+			</form>
+		</center>
+	</section>
+
+	<section id="content2" class="tab-content">
+		<center>
+			<form role="form" data-toggle="validator" class="quoteform">
+				<div class="form-row">
+				  <div class="form-group col-md-6">
+				    <label for="inputName">Nombres</label>
+				    <input type="name" class="form-control" id="inputName" placeholder="Nombres" required>
+				  </div>
+				  <div class="form-group col-md-6">
+				    <label for="memberscount">¿Cuántos miembros?</label>
+				    <select id="memberscount" class="form-control" required>
+				      <option selected>Escoger...</option>
+				      <option value="1">1</option>
+				      <option value="2">2</option>
+				      <option value="3">3</option>
+				      <option value="4">4</option>
+				      <option value="5">5</option>
+				      <option value="6">6</option>
+				      <option value="7">7</option>
+				      <option value="8">8</option>
+				      <option value="9">9</option>
+				      <option value="10">10</option>
+				      <option>10+</option>
+				    </select>
+				  </div>
+				  <div class="form-group col-md-4">
+				    <label for="telnumber">Número de teléfono</label>
+				    <input type="text" class="form-control telnumber" id="telnumber" placeholder="Número de teléfono" required>
+				  </div>
+				  <div class="form-group col-md-4">
+				    <label for="inputEmail4">Correo</label>
+				    <input type="email" class="form-control" id="inputEmail4" placeholder="Correo" required>
+				  </div>
+				  <div class="form-group col-md-4 forages">
+				    <label for="ages">Siglos</label>
+				    <input type="text" class="form-control" id="ages" placeholder="32, 43, 20" required>
+				  </div>
+				  <div class="form-group col-md-4 forpregnant hide">
+				    <label for="ages">Semana de gestación</label>
+				    <input type="text" class="form-control" id="ages" placeholder="Semana de gestación" required>
+				  </div>
+					  <div class="i-checks"><label class="pregnant"> <input type="checkbox" value=""> <i></i> Viaje para embarazadas </label></div><br>
+				</div>
+				<ul class="destinations  col-xs-12 col-sm-12">
+				</ul>
+				<div class="form-row">
+				  <div class="form-group col-md-4">
+				    <label for="brand">¿Dónde ir?</label>
+				    <div>
+					    <select data-placeholder="Elija países..." class="form-control select2_demo_2" multiple="multiple">
+		                    <option value="">Select</option>
+		                    <option value="United States">United States</option>
+		                    <option value="United Kingdom">United Kingdom</option>
+		                    <option value="Afghanistan">Afghanistan</option>
+		                    <option value="Aland Islands">Aland Islands</option>
+		                    <option value="Albania">Albania</option>
+		                    <option value="Algeria">Algeria</option>
+		                    <option value="American Samoa">American Samoa</option>
+		                    <option value="Andorra">Andorra</option>
+		                    <option value="Angola">Angola</option>
+		                    <option value="Anguilla">Anguilla</option>
+		                    <option value="Antarctica">Antarctica</option>
+		                    <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+		                    <option value="Argentina">Argentina</option>
+		                    <option value="Armenia">Armenia</option>
+		                    <option value="Aruba">Aruba</option>
+		                    <option value="Australia">Australia</option>
+		                    <option value="Austria">Austria</option>
+		                    <option value="Azerbaijan">Azerbaijan</option>
+		                    <option value="Bahamas">Bahamas</option>
+		                    <option value="Bahrain">Bahrain</option>
+		                    <option value="Bangladesh">Bangladesh</option>
+		                    <option value="Barbados">Barbados</option>
+		                    <option value="Belarus">Belarus</option>
+		                    <option value="Belgium">Belgium</option>
+		                    <option value="Belize">Belize</option>
+		                    <option value="Benin">Benin</option>
+		                    <option value="Bermuda">Bermuda</option>
+		                    <option value="Bhutan">Bhutan</option>
+		                    <option value="Bolivia, Plurinational State of">Bolivia, Plurinational State of</option>
+		                    <option value="Bonaire, Sint Eustatius and Saba">Bonaire, Sint Eustatius and Saba</option>
+		                    <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+		                    <option value="Botswana">Botswana</option>
+		                    <option value="Bouvet Island">Bouvet Island</option>
+		                    <option value="Brazil">Brazil</option>
+		                    <option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+		                    <option value="Brunei Darussalam">Brunei Darussalam</option>
+		                    <option value="Bulgaria">Bulgaria</option>
+		                    <option value="Burkina Faso">Burkina Faso</option>
+		                    <option value="Burundi">Burundi</option>
+		                    <option value="Cambodia">Cambodia</option>
+		                    <option value="Cameroon">Cameroon</option>
+		                    <option value="Canada">Canada</option>
+		                    <option value="Cape Verde">Cape Verde</option>
+		                    <option value="Cayman Islands">Cayman Islands</option>
+		                    <option value="Central African Republic">Central African Republic</option>
+		                    <option value="Chad">Chad</option>
+		                    <option value="Chile">Chile</option>
+		                    <option value="China">China</option>
+		                    <option value="Christmas Island">Christmas Island</option>
+		                    <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+		                    <option value="Colombia">Colombia</option>
+		                    <option value="Comoros">Comoros</option>
+		                    <option value="Congo">Congo</option>
+		                    <option value="Congo, The Democratic Republic of The">Congo, The Democratic Republic of The</option>
+		                    <option value="Cook Islands">Cook Islands</option>
+		                    <option value="Costa Rica">Costa Rica</option>
+		                    <option value="Cote D'ivoire">Cote D'ivoire</option>
+		                    <option value="Croatia">Croatia</option>
+		                    <option value="Cuba">Cuba</option>
+		                    <option value="Curacao">Curacao</option>
+		                    <option value="Cyprus">Cyprus</option>
+		                    <option value="Czech Republic">Czech Republic</option>
+		                    <option value="Denmark">Denmark</option>
+		                    <option value="Djibouti">Djibouti</option>
+		                    <option value="Dominica">Dominica</option>
+		                    <option value="Dominican Republic">Dominican Republic</option>
+		                    <option value="Ecuador">Ecuador</option>
+		                    <option value="Egypt">Egypt</option>
+		                    <option value="El Salvador">El Salvador</option>
+		                    <option value="Equatorial Guinea">Equatorial Guinea</option>
+		                    <option value="Eritrea">Eritrea</option>
+		                    <option value="Estonia">Estonia</option>
+		                    <option value="Ethiopia">Ethiopia</option>
+		                    <option value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>
+		                    <option value="Faroe Islands">Faroe Islands</option>
+		                    <option value="Fiji">Fiji</option>
+		                    <option value="Finland">Finland</option>
+		                    <option value="France">France</option>
+		                    <option value="French Guiana">French Guiana</option>
+		                    <option value="French Polynesia">French Polynesia</option>
+		                    <option value="French Southern Territories">French Southern Territories</option>
+		                    <option value="Gabon">Gabon</option>
+		                    <option value="Gambia">Gambia</option>
+		                    <option value="Georgia">Georgia</option>
+		                    <option value="Germany">Germany</option>
+		                    <option value="Ghana">Ghana</option>
+		                    <option value="Gibraltar">Gibraltar</option>
+		                    <option value="Greece">Greece</option>
+		                    <option value="Greenland">Greenland</option>
+		                    <option value="Grenada">Grenada</option>
+		                    <option value="Guadeloupe">Guadeloupe</option>
+		                    <option value="Guam">Guam</option>
+		                    <option value="Guatemala">Guatemala</option>
+		                    <option value="Guernsey">Guernsey</option>
+		                    <option value="Guinea">Guinea</option>
+		                    <option value="Guinea-bissau">Guinea-bissau</option>
+		                    <option value="Guyana">Guyana</option>
+		                    <option value="Haiti">Haiti</option>
+		                    <option value="Heard Island and Mcdonald Islands">Heard Island and Mcdonald Islands</option>
+		                    <option value="Holy See (Vatican City State)">Holy See (Vatican City State)</option>
+		                    <option value="Honduras">Honduras</option>
+		                    <option value="Hong Kong">Hong Kong</option>
+		                    <option value="Hungary">Hungary</option>
+		                    <option value="Iceland">Iceland</option>
+		                    <option value="India">India</option>
+		                    <option value="Indonesia">Indonesia</option>
+		                    <option value="Iran, Islamic Republic of">Iran, Islamic Republic of</option>
+		                    <option value="Iraq">Iraq</option>
+		                    <option value="Ireland">Ireland</option>
+		                    <option value="Isle of Man">Isle of Man</option>
+		                    <option value="Israel">Israel</option>
+		                    <option value="Italy">Italy</option>
+		                    <option value="Jamaica">Jamaica</option>
+		                    <option value="Japan">Japan</option>
+		                    <option value="Jersey">Jersey</option>
+		                    <option value="Jordan">Jordan</option>
+		                    <option value="Kazakhstan">Kazakhstan</option>
+		                    <option value="Kenya">Kenya</option>
+		                    <option value="Kiribati">Kiribati</option>
+		                    <option value="Korea, Democratic People's Republic of">Korea, Democratic People's Republic of</option>
+		                    <option value="Korea, Republic of">Korea, Republic of</option>
+		                    <option value="Kuwait">Kuwait</option>
+		                    <option value="Kyrgyzstan">Kyrgyzstan</option>
+		                    <option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option>
+		                    <option value="Latvia">Latvia</option>
+		                    <option value="Lebanon">Lebanon</option>
+		                    <option value="Lesotho">Lesotho</option>
+		                    <option value="Liberia">Liberia</option>
+		                    <option value="Libya">Libya</option>
+		                    <option value="Liechtenstein">Liechtenstein</option>
+		                    <option value="Lithuania">Lithuania</option>
+		                    <option value="Luxembourg">Luxembourg</option>
+		                    <option value="Macao">Macao</option>
+		                    <option value="Macedonia, The Former Yugoslav Republic of">Macedonia, The Former Yugoslav Republic of</option>
+		                    <option value="Madagascar">Madagascar</option>
+		                    <option value="Malawi">Malawi</option>
+		                    <option value="Malaysia">Malaysia</option>
+		                    <option value="Maldives">Maldives</option>
+		                    <option value="Mali">Mali</option>
+		                    <option value="Malta">Malta</option>
+		                    <option value="Marshall Islands">Marshall Islands</option>
+		                    <option value="Martinique">Martinique</option>
+		                    <option value="Mauritania">Mauritania</option>
+		                    <option value="Mauritius">Mauritius</option>
+		                    <option value="Mayotte">Mayotte</option>
+		                    <option value="Mexico">Mexico</option>
+		                    <option value="Micronesia, Federated States of">Micronesia, Federated States of</option>
+		                    <option value="Moldova, Republic of">Moldova, Republic of</option>
+		                    <option value="Monaco">Monaco</option>
+		                    <option value="Mongolia">Mongolia</option>
+		                    <option value="Montenegro">Montenegro</option>
+		                    <option value="Montserrat">Montserrat</option>
+		                    <option value="Morocco">Morocco</option>
+		                    <option value="Mozambique">Mozambique</option>
+		                    <option value="Myanmar">Myanmar</option>
+		                    <option value="Namibia">Namibia</option>
+		                    <option value="Nauru">Nauru</option>
+		                    <option value="Nepal">Nepal</option>
+		                    <option value="Netherlands">Netherlands</option>
+		                    <option value="New Caledonia">New Caledonia</option>
+		                    <option value="New Zealand">New Zealand</option>
+		                    <option value="Nicaragua">Nicaragua</option>
+		                    <option value="Niger">Niger</option>
+		                    <option value="Nigeria">Nigeria</option>
+		                    <option value="Niue">Niue</option>
+		                    <option value="Norfolk Island">Norfolk Island</option>
+		                    <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+		                    <option value="Norway">Norway</option>
+		                    <option value="Oman">Oman</option>
+		                    <option value="Pakistan">Pakistan</option>
+		                    <option value="Palau">Palau</option>
+		                    <option value="Palestinian Territory, Occupied">Palestinian Territory, Occupied</option>
+		                    <option value="Panama">Panama</option>
+		                    <option value="Papua New Guinea">Papua New Guinea</option>
+		                    <option value="Paraguay">Paraguay</option>
+		                    <option value="Peru">Peru</option>
+		                    <option value="Philippines">Philippines</option>
+		                    <option value="Pitcairn">Pitcairn</option>
+		                    <option value="Poland">Poland</option>
+		                    <option value="Portugal">Portugal</option>
+		                    <option value="Puerto Rico">Puerto Rico</option>
+		                    <option value="Qatar">Qatar</option>
+		                    <option value="Reunion">Reunion</option>
+		                    <option value="Romania">Romania</option>
+		                    <option value="Russian Federation">Russian Federation</option>
+		                    <option value="Rwanda">Rwanda</option>
+		                    <option value="Saint Barthelemy">Saint Barthelemy</option>
+		                    <option value="Saint Helena, Ascension and Tristan da Cunha">Saint Helena, Ascension and Tristan da Cunha</option>
+		                    <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+		                    <option value="Saint Lucia">Saint Lucia</option>
+		                    <option value="Saint Martin (French part)">Saint Martin (French part)</option>
+		                    <option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
+		                    <option value="Saint Vincent and The Grenadines">Saint Vincent and The Grenadines</option>
+		                    <option value="Samoa">Samoa</option>
+		                    <option value="San Marino">San Marino</option>
+		                    <option value="Sao Tome and Principe">Sao Tome and Principe</option>
+		                    <option value="Saudi Arabia">Saudi Arabia</option>
+		                    <option value="Senegal">Senegal</option>
+		                    <option value="Serbia">Serbia</option>
+		                    <option value="Seychelles">Seychelles</option>
+		                    <option value="Sierra Leone">Sierra Leone</option>
+		                    <option value="Singapore">Singapore</option>
+		                    <option value="Sint Maarten (Dutch part)">Sint Maarten (Dutch part)</option>
+		                    <option value="Slovakia">Slovakia</option>
+		                    <option value="Slovenia">Slovenia</option>
+		                    <option value="Solomon Islands">Solomon Islands</option>
+		                    <option value="Somalia">Somalia</option>
+		                    <option value="South Africa">South Africa</option>
+		                    <option value="South Georgia and The South Sandwich Islands">South Georgia and The South Sandwich Islands</option>
+		                    <option value="South Sudan">South Sudan</option>
+		                    <option value="Spain">Spain</option>
+		                    <option value="Sri Lanka">Sri Lanka</option>
+		                    <option value="Sudan">Sudan</option>
+		                    <option value="Suriname">Suriname</option>
+		                    <option value="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
+		                    <option value="Swaziland">Swaziland</option>
+		                    <option value="Sweden">Sweden</option>
+		                    <option value="Switzerland">Switzerland</option>
+		                    <option value="Syrian Arab Republic">Syrian Arab Republic</option>
+		                    <option value="Taiwan, Province of China">Taiwan, Province of China</option>
+		                    <option value="Tajikistan">Tajikistan</option>
+		                    <option value="Tanzania, United Republic of">Tanzania, United Republic of</option>
+		                    <option value="Thailand">Thailand</option>
+		                    <option value="Timor-leste">Timor-leste</option>
+		                    <option value="Togo">Togo</option>
+		                    <option value="Tokelau">Tokelau</option>
+		                    <option value="Tonga">Tonga</option>
+		                    <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+		                    <option value="Tunisia">Tunisia</option>
+		                    <option value="Turkey">Turkey</option>
+		                    <option value="Turkmenistan">Turkmenistan</option>
+		                    <option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
+		                    <option value="Tuvalu">Tuvalu</option>
+		                    <option value="Uganda">Uganda</option>
+		                    <option value="Ukraine">Ukraine</option>
+		                    <option value="United Arab Emirates">United Arab Emirates</option>
+		                    <option value="United Kingdom">United Kingdom</option>
+		                    <option value="United States">United States</option>
+		                    <option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
+		                    <option value="Uruguay">Uruguay</option>
+		                    <option value="Uzbekistan">Uzbekistan</option>
+		                    <option value="Vanuatu">Vanuatu</option>
+		                    <option value="Venezuela, Bolivarian Republic of">Venezuela, Bolivarian Republic of</option>
+		                    <option value="Viet Nam">Viet Nam</option>
+		                    <option value="Virgin Islands, British">Virgin Islands, British</option>
+		                    <option value="Virgin Islands, U.S.">Virgin Islands, U.S.</option>
+		                    <option value="Wallis and Futuna">Wallis and Futuna</option>
+		                    <option value="Western Sahara">Western Sahara</option>
+		                    <option value="Yemen">Yemen</option>
+		                    <option value="Zambia">Zambia</option>
+		                    <option value="Zimbabwe">Zimbabwe</option>
+		                </select>
+		            </div>
+				  </div>
+				  <div class="form-group col-md-8">
+				    <div class="input-daterange" id="datepicker">
+				      <div class="form-group col-md-6">
+				        <label for="from">Fecha de inicio</label>
+				        <input type="text" class="form-control" name="from" placeholder="From date" required>
+				      </div>
+				      <div class="form-group col-md-6">
+				        <label for="to">Fecha final</label>
+				        <input type="text" class="form-control" name="to" placeholder="To date" required>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+				<button id="travelnext" class="btn btn-info">Ir al paso 2</button>
+			</form>
+		</center>
+      
+	</section>
+
+	<section id="content3" class="tab-content">
+		<center>
+		  <form role="form" data-toggle="validator" class="quoteform">
+		    <div class="form-row">
+				<div class="form-group col-md-6">
+					<input id="structure" type="text" data-slider-min="1000" data-slider-max="15000" data-slider-step="1000" data-slider-value="2000"/>
+					<span id="structureLabel"><b>Estructura: $<span>2000</span></b></span>
+				</div>
+				<div class="form-group col-md-6">
+					<input id="content" type="text" data-slider-min="300" data-slider-max="3000" data-slider-step="100" data-slider-value="800"/>
+					<span id="contentLabel"><b>Contenido: $<span >800</span></b></span>
+				</div>
+				<div class="form-group col-md-4">
+				<label for="inputName">Nombres</label>
+				<input type="name" class="form-control" id="inputName" placeholder="Nombres" required>
+				</div>
+				<div class="form-group col-md-4">
+				<label for="firstname">Apellido paterno</label>
+				<input type="text" class="form-control" id="firstname" placeholder="Apellido paterno" required>
+				</div>
+				<div class="form-group col-md-4">
+				<label for="lastname">Apellido materno</label>
+				<input type="text" class="form-control" id="lastname" placeholder="Apellido materno" required>
+				</div>
+				<div class="form-group col-md-4">
+				<label for="telnumber">RUT</label>
+				<input type="text" class="form-control rut" id="houserut" placeholder="RUT" required>
+				</div>
+				<div class="form-group col-md-4">
+				<label for="telnumber">Número de teléfono</label>
+				<input type="text" class="form-control telnumber" id="housetel" placeholder="Número de teléfono" required>
+				</div>
+				<div class="form-group col-md-4">
+				<label for="inputEmail4">Correo</label>
+				<input type="email" class="form-control" id="houseemail" placeholder="Correo" required>
+				</div>
+
+				<div class="form-group col-md-4">
+					<label for="brand">TIPO DE VIVIENDA</label>
+					<select name="TIPO DE VIVIENDA" class="form-control">
+	                    <option value="-">TIPO DE VIVIENDA</option>
+	                    <option value="1">CASA</option>
+	                    <option value="2">DEPARTAMENTO</option>
+	                </select>
+				</div>
+				<div class="form-group col-md-4">
+					<label for="brand">TIPO DE CONSTRUCCION</label>
+					<select name="TIPO DE CONSTRUCCION" class="form-control">
+		                <option value="-">TIPO DE CONSTRUCCION</option>
+		                <option value="1">LIGERO</option>
+		                <option value="2">SOLIDO</option>
+		            </select>
+				</div>
+				<div class="form-group col-md-4">
+					<label for="brand">TIPO DE MATERIAL</label>
+					<select name="TIPO DE MATERIAL" class="form-control">
+                        <option value="-">TIPO DE MATERIAL</option>
+                        <option value="1">OTRO LIGERO</option>
+                        <option value="2">PARCIAL/TOTAL ADOBE</option>
+                    </select>
+				</div>
+				<div class="form-group col-md-6">
+					<label for="brand">REGION DONDE SE UBICA LA PROPIEDAD</label>
+                    <select name="REGION DONDE SE UBICA LA PROPIEDAD" class="form-control">
+                        <option value="-">REGION DONDE SE UBICA LA PROPIEDAD</option>
+                        <option value="2">I.- TARAPACA</option>
+                        <option value="3">II.- ANTOFAGASTA</option>
+                        <option value="4">III.- ATACAMA</option>
+                        <option value="5">IV.-COQUIMBO</option>
+                        <option value="10">IX.- DE LA ARAUCANIA</option>
+                        <option value="6">V.- VALPARAISO</option>
+                        <option value="7">VI.- DEL LIB GRAL BERNARDO OHIGGINS</option>
+                        <option value="8">VII.- DEL MAULE</option>
+                        <option value="9">VIII.- DEL BIO BIO</option>
+                        <option value="12">X.- DE LOS LAGOS</option>
+                        <option value="13">XI.- AISEN DEL GRAL CARLOS I DEL CAMPO</option>
+                        <option value="15">XIII.-METROPOLITANA</option>
+                        <option value="11">XIV.- DE LOS RIOS</option>
+                        <option value="1">XV.- ARICA Y PARINACOTA</option>
+                    </select>
+				</div>
+				<div class="form-group col-md-6">
+					<label for="brand">Provincia</label>
+                    <select name="Provincia" class="form-control">
+                        <option value="-">Provincia</option>
+                        <option value="2">IQUIQUE</option>
+                        <option value="3">TAMARUGAL</option>
+                        <option value="4">ANTOFAGASTA</option>
+                        <option value="5">EL LOA</option>
+                        <option value="10">TOCOPILLA</option>
+                        <option value="6">CHANARAL</option>
+                        <option value="7">COPIAPO</option>
+                        <option value="8">HUASCO</option>
+                        <option value="9">CHOAPA/option&gt;
+                        </option><option value="12">ELQUI</option>
+                        <option value="13">LIMARI</option>
+                    </select>
+				</div>
+		    </div>
+		    <button class="btn btn-info housenext">Ir al paso 2</button>
+		  </form>
+		</center>
+    
+	</section>
+
+	<section id="content4" class="tab-content">
+		<center>
+		  <form action="/getquote/rcp_productlist"   role="form" data-toggle="validator" class="quoteform">
+		    <div class="form-row">
+		      <div class="form-group col-md-4">
+		        <label for="inputName">Nombres</label>
+		        <input type="name" class="form-control" id="inputName" placeholder="Nombres" required>
+		      </div>
+		      <div class="form-group col-md-4">
+		        <label for="firstname">Apellido paterno</label>
+		        <input type="text" class="form-control" id="firstname" placeholder="Apellido paterno" required>
+		      </div>
+		      <div class="form-group col-md-4">
+		        <label for="lastname">Apellido materno</label>
+		        <input type="text" class="form-control" id="lastname" placeholder="Apellido materno" required>
+		      </div>
+		      <div class="form-group col-md-6">
+		        <label for="telnumber">Número de teléfono</label>
+		        <input type="text" class="form-control telnumber" id="telnumber" placeholder="Número de teléfono" required>
+		      </div>
+		      <div class="form-group col-md-6">
+		        <label for="inputEmail4">Correo</label>
+		        <input type="email" class="form-control" id="inputEmail4" placeholder="Correo" required>
+		      </div>
+		      <div class="form-group col-md-4">
+		        <label for="inputAddress">Comuna</label>
+		        <select name="Comuna" class="form-control" required>
+                    <option value="-" selected></option>
+                    <option value="275">Aisén</option>
+                    <option value="72">Algarrobo</option>
+                    <option value="337">Alhué</option>
+                    <option value="178">Alto Biobío</option>
+                    <option value="27">Alto del Carmen</option>
+                    <option value="6">Alto Hospicio</option>
+                    <option value="253">Ancud</option>
+                    <option value="32">Andacollo</option>
+                    <option value="221">Angol</option>
+                    <option value="288">Antártica</option>
+                    <option value="12">Antofagasta</option>
+                    <option value="166">Antuco</option>
+                    <option value="159">Arauco</option>
+                    <option value="1">Arica</option>
+                    <option value="333">Buin</option>
+                    <option value="180">Bulnes</option>
+                    <option value="60">Cabildo</option>
+                    <option value="287">Cabo de Hornos</option>
+                    <option value="167">Cabrero</option>
+                    <option value="16">Calama</option>
+                    <option value="244">Calbuco</option>
+                    <option value="22">Caldera</option>
+                    <option value="65">Calera</option>
+                    <option value="334">Calera de Tango</option>
+                    <option value="56">Calle Larga</option>
+                    <option value="2">Camarones</option>
+                    <option value="8">Camiña</option>
+                    <option value="37">Canela</option>
+                    <option value="160">Cañete</option>
+                    <option value="201">Carahue</option>
+                    <option value="73">Cartagena</option>
+                    <option value="46">Casablanca</option>
+                    <option value="252">Castro</option>
+                    <option value="78">Catemu</option>
+                    <option value="126">Cauquenes</option>
+                    <option value="295">Cerrillos</option>
+                    <option value="296">Cerro Navia</option>
+                    <option value="269">Chaitén</option>
+                    <option value="24">Chañaral</option>
+                    <option value="127">Chanco</option>
+                    <option value="107">Chépica</option>
+                    <option value="148">Chiguayante</option>
+                    <option value="281">Chile Chico</option>
+                    <option value="179">Chillán</option>
+                    <option value="184">Chillán Viejo</option>
+                    <option value="108">Chimbarongo</option>
+                    <option value="220">Cholchol</option>
+                    <option value="254">Chonchi</option>
+                    <option value="276">Cisnes</option>
+                    <option value="181">Cobquecura</option>
+                    <option value="245">Cochamó</option>
+                    <option value="278">Cochrane</option>
+                    <option value="84">Codegua</option>
+                    <option value="182">Coelemu</option>
+                    <option value="273">Coihaique</option>
+                    <option value="183">Coihueco</option>
+                    <option value="85">Coinco</option>
+                    <option value="139">Colbún</option>
+                    <option value="9">Colchane</option>
+                    <option value="329">Colina</option>
+                    <option value="222">Collipulli</option>
+                    <option value="86">Coltauco</option>
+                    <option value="41">Combarbalá</option>
+                    <option value="146">Concepción</option>
+                    <option value="297">Conchalí</option>
+                    <option value="47">Concón</option>
+                    <option value="117">Constitución</option>
+                    <option value="161">Contulmo</option>
+                    <option value="21">Copiapó</option>
+                    <option value="31">Coquimbo</option>
+                    <option value="147">Coronel</option>
+                    <option value="233">Corral</option>
+                    <option value="202">Cunco</option>
+                    <option value="223">Curacautín</option>
+                    <option value="338">Curacaví</option>
+                    <option value="255">Curaco de Vélez</option>
+                    <option value="162">Curanilahue</option>
+                    <option value="203">Curarrehue</option>
+                    <option value="118">Curepto</option>
+                    <option value="129">Curicó</option>
+                    <option value="256">Dalcahue</option>
+                    <option value="25">Diego de Almagro</option>
+                    <option value="87">Doñihue</option>
+                    <option value="298">El Bosque</option>
+                    <option value="185">El Carmen</option>
+                    <option value="342">El Monte</option>
+                    <option value="74">El Quisco</option>
+                    <option value="75">El Tabo</option>
+                    <option value="119">Empedrado</option>
+                    <option value="224">Ercilla</option>
+                    <option value="299">Estación Central</option>
+                    <option value="149">Florida</option>
+                    <option value="204">Freire</option>
+                    <option value="28">Freirina</option>
+                    <option value="246">Fresia</option>
+                    <option value="247">Frutillar</option>
+                    <option value="270">Futaleufú</option>
+                    <option value="241">Futrono</option>
+                    <option value="205">Galvarino</option>
+                    <option value="4">General Lagos</option>
+                    <option value="206">Gorbea</option>
+                    <option value="88">Graneros</option>
+                    <option value="277">Guaitecas</option>
+                    <option value="66">Hijuelas</option>
+                    <option value="271">Hualaihué</option>
+                    <option value="130">Hualañé</option>
+                    <option value="157">Hualpén</option>
+                    <option value="150">Hualqui</option>
+                    <option value="10">Huara</option>
+                    <option value="29">Huasco</option>
+                    <option value="300">Huechuraba</option>
+                    <option value="36">Illapel</option>
+                    <option value="301">Independencia</option>
+                    <option value="5">Iquique</option>
+                    <option value="343">Isla de Maipo</option>
+                    <option value="54">Isla de Pascua</option>
+                    <option value="48">Juan Fernández</option>
+                    <option value="302">La Cisterna</option>
+                    <option value="67">La Cruz</option>
+                    <option value="101">La Estrella</option>
+                    <option value="303">La Florida</option>
+                    <option value="304">La Granja</option>
+                    <option value="33">La Higuera</option>
+                    <option value="59">La Ligua</option>
+                    <option value="305">La Pintana</option>
+                    <option value="306">La Reina</option>
+                    <option value="30">La Serena</option>
+                    <option value="240">La Unión</option>
+                    <option value="242">Lago Ranco</option>
+                    <option value="274">Lago Verde</option>
+                    <option value="284">Laguna Blanca</option>
+                    <option value="168">Laja</option>
+                    <option value="330">Lampa</option>
+                    <option value="234">Lanco</option>
+                    <option value="89">Las Cabras</option>
+                    <option value="307">Las Condes</option>
+                    <option value="207">Lautaro</option>
+                    <option value="158">Lebu</option>
+                    <option value="131">Licantén</option>
+                    <option value="68">Limache</option>
+                    <option value="138">Linares</option>
+                    <option value="102">Litueche</option>
+                    <option value="79">Llaillay</option>
+                    <option value="249">Llanquihue</option>
+                    <option value="308">Lo Barnechea</option>
+                    <option value="309">Lo Espejo</option>
+                    <option value="310">Lo Prado</option>
+                    <option value="109">Lolol</option>
+                    <option value="208">Loncoche</option>
+                    <option value="140">Longaví</option>
+                    <option value="225">Lonquimay</option>
+                    <option value="163">Los Alamos</option>
+                    <option value="55">Los Andes</option>
+                    <option value="165">Los Angeles</option>
+                    <option value="235">Los Lagos</option>
+                    <option value="248">Los Muermos</option>
+                    <option value="226">Los Sauces</option>
+                    <option value="38">Los Vilos</option>
+                    <option value="151">Lota</option>
+                    <option value="227">Lumaco</option>
+                    <option value="90">Machalí</option>
+                    <option value="311">Macul</option>
+                    <option value="236">Máfil</option>
+                    <option value="312">Maipú</option>
+                    <option value="91">Malloa</option>
+                    <option value="103">Marchihue</option>
+                    <option value="20">María Elena</option>
+                    <option value="339">María Pinto</option>
+                    <option value="237">Mariquina</option>
+                    <option value="120">Maule</option>
+                    <option value="250">Maullín</option>
+                    <option value="13">Mejillones</option>
+                    <option value="209">Melipeuco</option>
+                    <option value="336">Melipilla</option>
+                    <option value="132">Molina</option>
+                    <option value="42">Monte Patria</option>
+                    <option value="92">Mostazal</option>
+                    <option value="169">Mulchén</option>
+                    <option value="170">Nacimiento</option>
+                    <option value="110">Nancagua</option>
+                    <option value="292">Natales</option>
+                    <option value="104">Navidad</option>
+                    <option value="171">Negrete</option>
+                    <option value="186">Ninhue</option>
+                    <option value="187">Ñiquén</option>
+                    <option value="69">Nogales</option>
+                    <option value="210">Nueva Imperial</option>
+                    <option value="313">Ñuñoa</option>
+                    <option value="279">OHiggins</option>
+                    <option value="93">Olivar</option>
+                    <option value="17">Ollagüe</option>
+                    <option value="70">Olmué</option>
+                    <option value="262">Osorno</option>
+                    <option value="40">Ovalle</option>
+                    <option value="344">Padre Hurtado</option>
+                    <option value="211">Padre Las Casas</option>
+                    <option value="34">Paiguano</option>
+                    <option value="238">Paillaco</option>
+                    <option value="335">Paine</option>
+                    <option value="272">Palena</option>
+                    <option value="111">Palmilla</option>
+                    <option value="239">Panguipulli</option>
+                    <option value="80">Panquehue</option>
+                    <option value="61">Papudo</option>
+                    <option value="105">Paredones</option>
+                    <option value="141">Parral</option>
+                    <option value="314">Pedro Aguirre Cerda</option>
+                    <option value="121">Pelarco</option>
+                    <option value="128">Pelluhue</option>
+                    <option value="188">Pemuco</option>
+                    <option value="345">Peñaflor</option>
+                    <option value="315">Peñalolén</option>
+                    <option value="122">Pencahue</option>
+                    <option value="152">Penco</option>
+                    <option value="112">Peralillo</option>
+                    <option value="212">Perquenco</option>
+                    <option value="62">Petorca</option>
+                    <option value="94">Peumo</option>
+                    <option value="11">Pica</option>
+                    <option value="95">Pichidegua</option>
+                    <option value="100">Pichilemu</option>
+                    <option value="189">Pinto</option>
+                    <option value="327">Pirque</option>
+                    <option value="213">Pitrufquén</option>
+                    <option value="113">Placilla</option>
+                    <option value="190">Portezuelo</option>
+                    <option value="289">Porvenir</option>
+                    <option value="7">Pozo Almonte</option>
+                    <option value="290">Primavera</option>
+                    <option value="316">Providencia</option>
+                    <option value="49">Puchuncaví</option>
+                    <option value="214">Pucón</option>
+                    <option value="317">Pudahuel</option>
+                    <option value="326">Puente Alto</option>
+                    <option value="243">Puerto Montt</option>
+                    <option value="263">Puerto Octay</option>
+                    <option value="251">Puerto Varas</option>
+                    <option value="114">Pumanque</option>
+                    <option value="43">Punitaqui</option>
+                    <option value="283">Punta Arenas</option>
+                    <option value="257">Puqueldón</option>
+                    <option value="228">Purén</option>
+                    <option value="264">Purranque</option>
+                    <option value="81">Putaendo</option>
+                    <option value="3">Putre</option>
+                    <option value="265">Puyehue</option>
+                    <option value="258">Queilén</option>
+                    <option value="259">Quellón</option>
+                    <option value="260">Quemchi</option>
+                    <option value="172">Quilaco</option>
+                    <option value="318">Quilicura</option>
+                    <option value="173">Quilleco</option>
+                    <option value="191">Quillón</option>
+                    <option value="64">Quillota</option>
+                    <option value="50">Quilpué</option>
+                    <option value="261">Quinchao</option>
+                    <option value="96">Quinta de Tilcoco</option>
+                    <option value="319">Quinta Normal</option>
+                    <option value="51">Quintero</option>
+                    <option value="192">Quirihue</option>
+                    <option value="83">Rancagua</option>
+                    <option value="193">Ránquil</option>
+                    <option value="133">Rauco</option>
+                    <option value="320">Recoleta</option>
+                    <option value="229">Renaico</option>
+                    <option value="321">Renca</option>
+                    <option value="97">Rengo</option>
+                    <option value="98">Requínoa</option>
+                    <option value="142">Retiro</option>
+                    <option value="57">Rinconada</option>
+                    <option value="346">Río Bueno</option>
+                    <option value="123">Río Claro</option>
+                    <option value="44">Río Hurtado</option>
+                    <option value="282">Río Ibáñez</option>
+                    <option value="266">Río Negro</option>
+                    <option value="285">Río Verde</option>
+                    <option value="134">Romeral</option>
+                    <option value="215">Saavedra</option>
+                    <option value="135">Sagrada Familia</option>
+                    <option value="39">Salamanca</option>
+                    <option value="71">San Antonio</option>
+                    <option value="332">San Bernardo</option>
+                    <option value="194">San Carlos</option>
+                    <option value="124">San Clemente</option>
+                    <option value="58">San Esteban</option>
+                    <option value="195">San Fabián</option>
+                    <option value="77">San Felipe</option>
+                    <option value="106">San Fernando</option>
+                    <option value="286">San Gregorio</option>
+                    <option value="196">San Ignacio</option>
+                    <option value="143">San Javier</option>
+                    <option value="322">San Joaquín</option>
+                    <option value="328">San José de Maipo</option>
+                    <option value="267">San Juan de la Costa</option>
+                    <option value="323">San Miguel</option>
+                    <option value="197">San Nicolás</option>
+                    <option value="268">San Pablo</option>
+                    <option value="340">San Pedro</option>
+                    <option value="18">San Pedro de Atacama</option>
+                    <option value="153">San Pedro de la Paz</option>
+                    <option value="125">San Rafael</option>
+                    <option value="324">San Ramón</option>
+                    <option value="174">San Rosendo</option>
+                    <option value="99">San Vicente</option>
+                    <option value="175">Santa Bárbara</option>
+                    <option value="115">Santa Cruz</option>
+                    <option value="154">Santa Juana</option>
+                    <option value="82">Santa María</option>
+                    <option value="294">Santiago</option>
+                    <option value="76">Santo Domingo</option>
+                    <option value="14">Sierra Gorda</option>
+                    <option value="341">Talagante</option>
+                    <option value="116">Talca</option>
+                    <option value="155">Talcahuano</option>
+                    <option value="15">Taltal</option>
+                    <option value="200">Temuco</option>
+                    <option value="136">Teno</option>
+                    <option value="216">Teodoro Schmidt</option>
+                    <option value="23">Tierra Amarilla</option>
+                    <option value="331">Tiltil</option>
+                    <option value="291">Timaukel</option>
+                    <option value="164">Tirúa</option>
+                    <option value="19">Tocopilla</option>
+                    <option value="217">Toltén</option>
+                    <option value="156">Tomé</option>
+                    <option value="293">Torres del Paine</option>
+                    <option value="280">Tortel</option>
+                    <option value="230">Traiguén</option>
+                    <option value="198">Treguaco</option>
+                    <option value="176">Tucapel</option>
+                    <option value="232">Valdivia</option>
+                    <option value="26">Vallenar</option>
+                    <option value="45">Valparaíso</option>
+                    <option value="137">Vichuquén</option>
+                    <option value="231">Victoria</option>
+                    <option value="35">Vicuña</option>
+                    <option value="218">Vilcún</option>
+                    <option value="144">Villa Alegre</option>
+                    <option value="52">Villa Alemana</option>
+                    <option value="219">Villarrica</option>
+                    <option value="53">Viña del Mar</option>
+                    <option value="325">Vitacura</option>
+                    <option value="145">Yerbas Buenas</option>
+                    <option value="177">Yumbel</option>
+                    <option value="199">Yungay</option>
+                    <option value="63">Zapallar</option>
+                </select>
+		      </div>
+		      <div class="form-group col-md-4">
+		        <label for="family">¿Cuántas personas viven en su hogar?</label>
+		        <input type="number" class="form-control" id="family" required>
+		      </div>
+		      <div class="form-group col-md-4">
+		        <label for="carnumber">¿Cuántos autos tiene su familiar?</label>
+		        <input type="number" class="form-control" id="carnumber" required>
+		      </div>
+		    </div>
+		    <button type="submit" class="btn btn-info">Ir al paso 2</button>
+		  </form>
+		</center>
+      	
+	</section>
+
+	<section id="content5" class="tab-content">
+		<center>
+		  <form action="/getquote/soap_productlist"  role="form" data-toggle="validator" class="quoteform">
+		    <div class="form-row">
+		      <div class="form-group col-md-6">
+		        <label for="inputName">Nombres</label>
+		        <input type="name" class="form-control" id="inputName" placeholder="Nombres" required>
+		      </div>
+		      <div class="form-group col-md-6">
+		        <label for="firstname">Apellido paterno</label>
+		        <input type="text" class="form-control" id="firstname" placeholder="Apellido paterno" required>
+		      </div>
+		      <div class="form-group col-md-6">
+		        <label for="lastname">Apellido materno</label>
+		        <input type="text" class="form-control" id="lastname" placeholder="Apellido materno" required>
+		      </div>
+		      <div class="form-group col-md-6">
+		        <label for="inputEmail4">Correo</label>
+		        <input type="email" class="form-control" id="inputEmail4" placeholder="Correo" required>
+		      </div>
+		    </div>
+		    <button type="submit" class="btn btn-info">Ir al paso 2</button>
+		  </form>
+		</center>
+	</section>
+
+	<section id="content6" class="tab-content">
+		<center>
+		  <form action="/getquote/life_productlist"   role="form" data-toggle="validator" class="quoteform">
+		    <div class="form-row">
+	    	  <div class="form-group col-md-6">
+		        <label for="inputAddress">RUT</label>
+		        <input type="text" class="form-control rut" id="inputAddress" required>
+		      </div>
+		      <div class="form-group col-md-6">
+		        <label for="telnumber">Número de teléfono</label>
+		        <input type="text" class="form-control telnumber" id="telnumber" placeholder="Número de teléfono" required>
+		      </div>
+		      <div class="form-group col-md-6">
+		        <label for="inputEmail4">Correo</label>
+		        <input type="email" class="form-control" id="inputEmail4" placeholder="Correo" required>
+		      </div>
+		      <div class="form-group col-md-6">
+		        <label for="inputEmail4">Fecha de Nacimiento</label>
+		        <input class="form-control" type="date" id="birthdate" required>
+		      </div>
+		    </div>
+		    <button type="submit" class="btn btn-info">Ir al paso 2</button>
+		  </form>
+		</center>
+	</section>
+
+	<section id="content7" class="tab-content">
+		<center>
+			<form action="/getquote/moto"   role="form" data-toggle="validator" class="quoteform">
+			<div class="form-row">
+			  <div class="form-group col-md-4">
+			    <label for="inputName">Nombres</label>
+			    <input type="name" class="form-control" id="inputName" placeholder="Nombres" required>
+			  </div>
+			  <div class="form-group col-md-4">
+			    <label for="firstname">Apellido paterno</label>
+			    <input type="text" class="form-control" id="firstname" placeholder="Apellido paterno" required>
+			  </div>
+			  <div class="form-group col-md-4">
+			    <label for="lastname">Apellido materno</label>
+			    <input type="text" class="form-control" id="lastname" placeholder="Apellido materno" required>
+			  </div>
+			  <div class="form-group col-md-4">
+			    <label for="telnumber">Número de teléfono</label>
+			    <input type="text" class="form-control telnumber" id="telnumber" placeholder="Número de teléfono" required>
+			  </div>
+			  <div class="form-group col-md-4">
+			    <label for="inputEmail4">Correo</label>
+			    <input type="email" class="form-control" id="inputEmail4" placeholder="Correo" required>
+			  </div>
+			</div>
+			<div class="form-row">
+			  <div class="form-group col-md-4">
+			    <label for="brand">Marca de auto</label>
+			    <select id="brand" class="form-control" required>
+					<option value="-">Marca del auto</option>
+					<option value="1">ACADIAN</option>
+					<option value="2">ACURA</option>
+					<option value="3">ALFA ROMEO</option>
+					<option value="4">ASIA MOTORS</option>
+					<option value="5">AUDI</option>
+					<option value="6">BAIC</option>
+					<option value="7">BAW</option>
+					<option value="8">BMW</option>
+					<option value="9">BRILLIANCE</option>
+					<option value="10">BYD</option>
+					<option value="12">CHANGAN</option>
+					<option value="13">CHANGHE</option>
+					<option value="14">CHERY</option>
+					<option value="15">CHEVROLET</option>
+					<option value="16">CHRYSLER</option>
+					<option value="17">CITROEN</option>
+					<option value="18">DAEWOO</option>
+					<option value="19">DAIHATSU</option>
+					<option value="20">DFSK/DFM</option>
+					<option value="21">DODGE</option>
+					<option value="22">DONGFENG</option>
+					<option value="23">FAW</option>
+					<option value="24">FIAT</option>
+					<option value="25">FORD</option>
+					<option value="26">FOTON</option>
+					<option value="27">GAC MOTOR</option>
+					<option value="28">GEELY</option>
+					<option value="29">GREAT WALL</option>
+					<option value="30">HAFEI</option>
+					<option value="31">HAIMA</option>
+					<option value="32">HAVAL</option>
+					<option value="33">HONDA</option>
+					<option value="34">HYUNDAI</option>
+					<option value="35">NFINITI</option>
+					<option value="36">ISUZU</option>
+					<option value="37">JAC</option>
+					<option value="38">JAGUAR</option>
+					<option value="39">JEEP</option>
+					<option value="40">JINBEI</option>
+					<option value="41">KIA</option>
+					<option value="42">LANCIA</option>
+					<option value="43">LAND ROVER</option>
+					<option value="44">LEXUS</option>
+					<option value="45">LIFAN</option>
+					<option value="46">MAHINDRA</option>
+					<option value="47">MAZDA</option>
+					<option value="48">MERCEDES BENZ</option>
+					<option value="49">MG</option>
+					<option value="50">MINI</option>
+					<option value="51">MITSUBISHI</option>
+					<option value="52">NISSAN</option>
+					<option value="53">OPEL</option>
+					<option value="54">PEUGEOT</option>
+					<option value="55">PLYMOUTH</option>
+					<option value="56">PORSCHE</option>
+					<option value="57">PROTON</option>
+					<option value="58">RENAULT</option>
+					<option value="59">ROVER</option>
+					<option value="60">SAMSUNG</option>
+					<option value="61">SEAT</option>
+					<option value="62">SKODA</option>
+					<option value="63">SMA</option>
+					<option value="64">SSANGYONG</option>
+					<option value="65">SUBARU</option>
+					<option value="66">SUZUKI</option>
+					<option value="67">TATA</option>
+					<option value="68">TOYOTA</option>
+					<option value="69">VOLKSWAGEN</option>
+					<option value="70">VOLVO</option>
+					<option value="71">ZOTYE</option>
+					<option value="72">ZX AUTO</option>
+            	</select>
+			  </div>
+			  <div class="form-group col-md-4">
+			    <label for="carmodel">Modelo de coche</label>
+			    <select id="carmodel" class="form-control" required>
+			      <option selected>Choose...</option>
+			      <option value="-">Modelo del auto</option>
+	                <option value="1">GMC</option>
+	                <option value="2">MDX</option>
+	                <option value="2">ZDX</option>
+	                <option value="3">147</option>
+			    </select>
+			  </div>
+
+			  <div class="form-group col-md-4">
+			    <label for="registeryear">Año de registro</label>
+			    <select name="Registration year" class="form-control" required>
+                    <option value="-">Año de registro</option>
+                    <option value="2015">2017</option>
+                    <option value="2014">2016</option>
+                    <option value="2015">2015</option>
+                    <option value="2014">2014</option>
+                    <option value="2013">2013</option>
+                    <option value="2012">2012</option>
+                    <option value="2011">2011</option>
+                    <option value="2010">2010</option>
+                    <option value="2009">2009</option>
+                    <option value="2008">2008</option>
+                    <option value="2007">2007</option>
+                    <option value="2006">2006</option>
+                    <option value="2005">2005</option>
+                    <option value="2004">2004</option>
+                    <option value="2003">2003</option>
+                    <option value="2002">2002</option>
+                    <option value="2001">2001</option>
+                    <option value="2000">2000</option>
+                    <option value="1999">1999</option>
+                    <option value="1998">1998</option>
+                    <option value="1997">1997</option>
+                    <option value="1996">1996</option>
+                    <option value="1995">1995</option>
+                    <option value="1994">1994</option>
+                    <option value="1993">1993</option>
+                    <option value="1992">1992</option>
+                    <option value="1991">1991</option>
+                    <option value="1990">1990</option>
+                    <option value="1989">1989</option>
+                    <option value="1988">1988</option>
+                    <option value="1987">1987</option>
+                    <option value="1986">1986</option>
+                    <option value="1985">1985</option>
+                    <option value="1984">1984</option>
+                    <option value="1983">1983</option>
+                    <option value="1982">1982</option>
+                    <option value="1981">1981</option>
+                    <option value="1980">1980</option>
+                    <option value="1979">1979</option>
+                    <option value="1978">1978</option>
+                    <option value="1977">1977</option>
+                    <option value="1976">1976</option>
+                    <option value="1975">1975</option>
+                    <option value="1974">1974</option>
+                    <option value="1973">1973</option>
+                    <option value="1972">1972</option>
+                    <option value="1971">1971</option>
+                    <option value="1970">1970</option>
+                    <option value="1969">1969</option>
+                    <option value="1968">1968</option>
+                    <option value="1967">1967</option>
+                    <option value="1966">1966</option>
+                    <option value="1965">1965</option>
+                    <option value="1964">1964</option>
+                    <option value="1963">1963</option>
+                    <option value="1962">1962</option>
+                    <option value="1961">1961</option>
+                    <option value="1960">1960</option>
+                    <option value="1959">1959</option>
+                    <option value="1958">1958</option>
+                    <option value="1957">1957</option>
+                    <option value="1956">1956</option>
+                    <option value="1955">1955</option>
+                    <option value="1954">1954</option>
+                    <option value="1953">1953</option>
+                    <option value="1952">1952</option>
+                    <option value="1951">1951</option>
+                    <option value="1950">1950</option>
+                </select>
+			  </div>
+			  <div class="form-group col-md-4">
+			    <label for="Tipo de vehiculo">Tipo de vehiculo</label>
+			    <select name="vehicle type" class="form-control" required>
+                    <option value="-">Tipo de vehiculo</option>
+                    <option value="1">Automóvil</opiton>
+                    <option value="2">Camioneta</opiton>
+                    <option value="3">Furgon</opiton>
+                    <option value="4">Jeep</opiton>
+                    <option value="5">Minibus</opiton>
+                    <option value="6">Station Wagon</opiton>
+                    <option value="7">Van</opiton>
+                </select>
+			  </div>
+			</div>
+			<button type="submit" class="btn btn-info">Ir al paso 2</button>
+			</form>
+		</center>
+	</section>
+
+	<section id="content8" class="tab-content">
+		<center>
+		  <form action="/getquote/productlist" role="form" data-toggle="validator" class="quoteform">
+		    <div class="form-row">
+		      <div class="form-group col-md-6">
+		        <label for="inputName">Nombres</label>
+		        <input type="name" class="form-control" id="inputName" placeholder="Nombres" required>
+		      </div>
+		      <div class="form-group col-md-6">
+		        <label for="firstname">Apellido paterno</label>
+		        <input type="text" class="form-control" id="firstname" placeholder="Apellido paterno" required>
+		      </div>
+		      <div class="form-group col-md-6">
+		        <label for="lastname">Apellido materno</label>
+		        <input type="text" class="form-control" id="lastname" placeholder="Apellido materno" required>
+		      </div>
+		      <div class="form-group col-md-6">
+		        <label for="telnumber">Número de teléfono</label>
+		        <input type="text" class="form-control telnumber" id="telnumber" placeholder="Número de teléfono" required>
+		      </div>
+		      <div class="form-group col-md-6">
+		        <label for="inputEmail4">Correo</label>
+		        <input type="email" class="form-control" id="inputEmail4" placeholder="Correo" required>
+		      </div>
+		      <div class="form-group col-md-6">
+		        <label for="inputAddress">Dirección</label>
+		        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" required>
+		      </div>
+		      <div class="form-group col-md-4">
+		        <label for="brand">¿Qué tipo de propiedad es?</label>
+		        <select id="brand" class="form-control" required>
+		          <option value="" selected>Choose...</option>
+		          <option value="House">House</option>
+		          <option value="Flat / Apartment">Flat / Apartment</option>
+		          <option value="Bungalow">Bungalow</option>
+		          <option value="Town house">Town house</option>
+		          <option value="Other">Other</option>
+		        </select>
+		      </div>
+		      <div class="form-group col-md-4">
+		        <label for="aa">¿Qué tipo de propiedad es?</label>
+		        <select id="aa" class="form-control" required>
+		          <option value="" selected>Choose...</option>
+		          <option value="Semi-detached">Semi-detached</option>
+		          <option value="Detached">Detached</option>
+		          <option value="Link-detached">Link-detached</option>
+		          <option value="Terraced">Terraced</option>
+		          <option value="End terrace">End terrace</option>
+		        </select>
+		      </div>
+		      <div class="form-group col-md-4">
+		        <label for="bb">Roughly when was it built?</label>
+		        <select id="bb" class="form-control" required>
+		          <option value="" selected>Choose...</option>
+		          <option value="1">Antiguedad del Inmueble</option>
+		          <option value="1">Entre 1953 – 1972</option>
+		          <option value="2">Entre 1973-1988</option>
+		          <option value="3">Entre 1989-1993</option>
+		          <option value="4">Entre 1994-2000</option>
+		          <option value="5">Posterior año 2000</option>
+		        </select>
+		      </div>
+		    </div>
+		    <button type="submit" class="btn btn-info">Ir al paso 2</button>
+		  </form>
+		</center>
+      	
+	</section>
+</div>
+<script type="text/javascript" src="/assets/javascripts/cleave.min.js"></script>
+<script type="text/javascript" src="/assets/javascripts/bootstrap-slider.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/locale/es.js"></script>
+<script type="text/javascript">
+
+	$(function() {
+		$('.chosen-select').chosen({width: "100%"});
+		$(".select2_demo_2").select2({width: "100%"});
+
+		$('.i-checks').iCheck({
+	        checkboxClass: 'icheckbox_square-green',
+	        radioClass: 'iradio_square-green',
+	    });
+
+	    $('.pregnant').on('click', function() {
+	        if($(this).find('div').hasClass('checked')) {
+	        	$(".forpregnant").removeClass('hide');
+	        	$(".forages").addClass('hide');
+	        } else {
+	        	$(".forpregnant").addClass('hide');
+	        	$(".forages").removeClass('hide');
+	        }
+	    });
+
+	    $('#birthdate').datetimepicker({
+			locale: 'es',
+		});
+	});
+
+	$("#travelnext").on('click', function(e) {
+		var count = $("#memberscount").val();
+		var ages = $("#ages").val();
+		var res = ages.split(",");
+		if ($('.pregnant div').hasClass('checked')) {
+			e.preventDefault();
+			window.location.href = "/getquote/travel_productlist";
+		} else {
+			if (parseInt(count, 10) == parseInt(res.length, 10)) {
+				e.preventDefault();
+				window.location.href = "/getquote/travel_productlist";
+				return;
+			} else {
+				alert("Ingrese la edad correctamente");
+				e.preventDefault();
+				return;
+			}
+		}
+	});
+
+	$(".housenext").on('click', function(e) {
+		var rut = $("#houserut").val();
+		var tel = $("#housetel").val();
+		var email = $("#houseemail").val();
+		e.preventDefault();
+		window.location.href = "/getquote/house_productlist?rut=" + rut + "&tel=" + tel + "&email=" + email;
+	});
+
+	$('.telnumber').toArray().forEach(function(field){
+        new Cleave(field, {
+            numericOnly: true,
+            blocks: [9]
+        });
+    });
+
+    $('.rut').toArray().forEach(function(field){
+        new Cleave(field, {
+            numericOnly: true,
+            delimiters: ['-'],
+            blocks: [7, 1]
+        });
+    });
+
+    // With JQuery
+	$("#structure").slider();
+	$("#structure").on("slide", function(slideEvt) {
+		$("#structureLabel span").text(slideEvt.value);
+	});
+
+	$("#content").slider();
+	$("#content").on("slide", function(slideEvt) {
+		$("#contentLabel span").text(slideEvt.value);
+	});
+
+</script>
+

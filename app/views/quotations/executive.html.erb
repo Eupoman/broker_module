@@ -1,0 +1,753 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>Cotización</h2>
+
+            <ol class="breadcrumb">
+                <li>
+                    <a href="<%= url_for :controller => 'dashboard', :action => 'index' %>">Inicio</a>
+            </li>
+            <li class="active">
+                <strong><a>Cotización</a></strong>
+            </li>
+        </ol>
+    </div>
+    <div class="col-lg-2">
+
+    </div>
+</div>
+<link rel="stylesheet" href="//rawgit.com/vitalets/x-editable/master/dist/bootstrap3-editable/css/bootstrap-editable.css">
+<script src="//rawgit.com/vitalets/x-editable/master/dist/bootstrap3-editable/js/bootstrap-editable.js"></script>
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>Cotización</h5>
+
+                <div class="ibox-tools">
+                    <a class="collapse-link">
+                        <i class="fa fa-chevron-up"></i>
+                    </a>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-wrench"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li>
+                            <a href="#">Config option 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Config option 2</a>
+                        </li>
+                    </ul>
+                    <a class="close-link">
+                        <i class="fa fa-times"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="ibox-content">
+                <div class="row">
+                        <div class="col-sm-2 m-b-xs">
+                            <h5>Número</h5>
+                            <input type="text" name="" class="form-control">
+                        </div>
+                        <div class="col-sm-2 m-b-xs">
+                            <h5>Estado</h5>
+                            <select class="input-sm form-control input-s-sm inline">
+                                <option ></option>
+                                <option value="0">En Proceso</option>
+                                <option value="1">Eliminada</option>
+                                <option value="2">Emitida</option>
+                                <option value="3">Todas</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-1 m-b-xs">
+                            <h5>Rut Contratante</h5>
+                            <input type="text" name="" class="form-control">
+                        </div>
+                        <div class="col-sm-1 m-b-xs">
+                            <h5>Rut Asegurado</h5>
+                            <input type="text" name="" class="form-control">
+                        </div>
+                        <div class="col-sm-1 m-b-xs">
+                            <h5>Patente</h5>
+                            <input type="text" name="" class="form-control">
+                        </div>
+                        <div class="col-sm-2 m-b-xs">
+                            <h5>Fecha inicio</h5>
+                            <input type="date" name="" class="form-control">
+                        </div>
+                        <div class="col-sm-2 m-b-xs">
+                            <h5>Fecha termino</h5>
+                            <input type="date" name="" class="form-control">
+                        </div>
+                        <div class="col-sm-1 m-b-xs">
+                            <h5>&nbsp</h5>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-outline btn-sm btn-default">Enviar</button>
+                            </div>
+                        </div>
+                </div>
+                <br>
+                <table class="footable table table-stripped toggle-arrow-tiny quotelist" data-page-size="15">
+                    <thead>
+                    <tr>
+                        <th data-toggle="true">Número</th>
+                        <th data-hide="phone">RUT Contratante</th>
+                        <th data-hide="phone">Nombre Contratante</th>
+                        <th data-hide="phone">Estado</th>
+                        <th data-hide="phone">Fecha Creación</th>
+                        <th data-hide="phone">Usuario Creador</th>
+                        <th data-hide="phone">Cotización</th>
+                        <th data-hide="phone">Tipos de Seguros</th>
+                        <th data-hide="phone">Inspección</th>
+                        <th data-hide="phone">Emisión</th>
+                        <th class="text-right" data-sort-ignore="true"></th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            4947132
+                        </td>
+                        <td>
+                            15.160.423-1
+                        </td>
+                        <td>
+                            CHALES DE, BEAULIEU ZAMORA FRANCISCO ADOLFO
+                        </td>
+                        </td>
+                        <td>
+                            <span class="label label-primary">En Proceso</span>
+                        </td>
+                        <td>
+                            18-12-2017
+                        </td>
+                        <td>
+                            C_ESEGUR
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="text-right">
+                            <div class="btn-group">
+                                <button class="btn-white btn btn-xs">Editar</button>
+                                <button class="btn-white btn btn-xs">Eliminar</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            4947232
+                        </td>
+                        <td>
+                            7.452.423-2
+                        </td>
+                        <td>
+                            CHALES DE, BEAULIEU ZAMORA FRANCISCO ADOLFO
+                        </td>
+                        </td>
+                        <td>
+                            <span class="label label-primary">En Proceso</span>
+                        </td>
+                        <td>
+                            18-12-2017
+                        </td>
+                        <td>
+                            C_ESEGUR
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="text-right">
+                            <div class="btn-group">
+                                <button class="btn-white btn btn-xs">Editar</button>
+                                <button class="btn-white btn btn-xs">Eliminar</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            4947332
+                        </td>
+                        <td>
+                            15.452.423-3
+                        </td>
+                        <td>
+                                CHAVEZ PAREDES, EVELYN ELIZABETH
+                        </td>
+                        </td>
+                        <td>
+                            <span class="label label-danger">Emitida</span>
+                        </td>
+                        <td>
+                            18-12-2017
+                        </td>
+                        <td>
+                            C_ESEGUR
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="text-right">
+                            <div class="btn-group">
+                                <button class="btn-white btn btn-xs">Editar</button>
+                                <button class="btn-white btn btn-xs">Eliminar</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            4947432
+                        </td>
+                        <td>
+                            15.452.423-4
+                        </td>
+                        <td>
+                                CHAVEZ PAREDES, EVELYN ELIZABETH
+                        </td>
+                        </td>
+                        <td>
+                            <span class="label label-primary">Emitida</span>
+                        </td>
+                        <td>
+                            18-12-2017
+                        </td>
+                        <td>
+                            C_ESEGUR
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="text-right">
+                            <div class="btn-group">
+                                <button class="btn-white btn btn-xs">Editar</button>
+                                <button class="btn-white btn btn-xs">Eliminar</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            4947532
+                        </td>
+                        <td>
+                            15.160.423-5
+                        </td>
+                        <td>
+                            PROYECTOS E INSTALACIONES ELECTRICAS FERNANDO ENRI
+                        </td>
+                        </td>
+                        <td>
+                            <span class="label label-warning">Eliminada</span>
+                        </td>
+                        <td>
+                            20-11-2017
+                        </td>
+                        <td>
+                            C_ESEGUR
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="text-right">
+                            <div class="btn-group">
+                                <button class="btn-white btn btn-xs">Editar</button>
+                                <button class="btn-white btn btn-xs">Eliminar</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            4947632
+                        </td>
+                        <td>
+                            76.160.423-6
+                        </td>
+                        <td>
+                            PROYECTOS E INSTALACIONES ELECTRICAS FERNANDO ENRI
+                        </td>
+                        </td>
+                        <td>
+                            <span class="label label-danger">Emitida</span>
+                        </td>
+                        <td>
+                            20-11-2017
+                        </td>
+                        <td>
+                            C_ESEGUR
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="text-right">
+                            <div class="btn-group">
+                                <button class="btn-white btn btn-xs">Editar</button>
+                                <button class="btn-white btn btn-xs">Eliminar</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            4947732
+                        </td>
+                        <td>
+                            76.160.423-7
+                        </td>
+                        <td>
+                            TAPIA SILVA, ADRIAN
+                        </td>
+                        </td>
+                        <td>
+                            <span class="label label-danger">Emitida</span>
+                        </td>
+                        <td>
+                            20-11-2017
+                        </td>
+                        <td>
+                            C_ESEGUR
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="text-right">
+                            <div class="btn-group">
+                                <button class="btn-white btn btn-xs">Editar</button>
+                                <button class="btn-white btn btn-xs">Eliminar</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            4947832
+                        </td>
+                        <td>
+                            76.160.423-8
+                        </td>
+                        <td>
+                            TAPIA SILVA, ADRIAN
+                        </td>
+                        </td>
+                        <td>
+                            <span class="label label-primary">En Proceso</span>
+                        </td>
+                        <td>
+                            08-10-2017
+                        </td>
+                        <td>
+                            C_ESEGUR
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="text-right">
+                            <div class="btn-group">
+                                <button class="btn-white btn btn-xs">Editar</button>
+                                <button class="btn-white btn btn-xs">Eliminar</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            4947932
+                        </td>
+                        <td>
+                            15.160.423-9
+                        </td>
+                        <td>
+                            VILLALOBOS CONTRERAS, LUIS HERNÁN
+                        </td>
+                        </td>
+                        <td>
+                            <span class="label label-warning">Eliminada</span>
+                        </td>
+                        <td>
+                            08-10-2017
+                        </td>
+                        <td>
+                            C_ESEGUR
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="text-right">
+                            <div class="btn-group">
+                                <button class="btn-white btn btn-xs">Editar</button>
+                                <button class="btn-white btn btn-xs">Eliminar</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            49471320
+                        </td>
+                        <td>
+                            15.160.423-10
+                        </td>
+                        <td>
+                            VILLALOBOS CONTRERAS, LUIS HERNÁN
+                        </td>
+                        </td>
+                        <td>
+                            <span class="label label-warning">Eliminada</span>
+                        </td>
+                        <td>
+                            08-10-2017
+                        </td>
+                        <td>
+                            C_ESEGUR
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="text-right">
+                            <div class="btn-group">
+                                <button class="btn-white btn btn-xs">Editar</button>
+                                <button class="btn-white btn btn-xs">Eliminar</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            4947132
+                        </td>
+                        <td>
+                            15.160.423-1
+                        </td>
+                        <td>
+                            VILLALOBOS CONTRERAS, LUIS HERNÁN
+                        </td>
+                        </td>
+                        <td>
+                            <span class="label label-primary">En Proceso</span>
+                        </td>
+                        <td>
+                            18-12-2017
+                        </td>
+                        <td>
+                            C_ESEGUR
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="text-right">
+                            <div class="btn-group">
+                                <button class="btn-white btn btn-xs">Editar</button>
+                                <button class="btn-white btn btn-xs">Eliminar</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            4947232
+                        </td>
+                        <td>
+                            15.160.423-2
+                        </td>
+                        <td>
+                            VILLALOBOS CONTRERAS, LUIS HERNÁN
+                        </td>
+                        </td>
+                        <td>
+                            <span class="label label-primary">En Proceso</span>
+                        </td>
+                        <td>
+                            18-12-2017
+                        </td>
+                        <td>
+                            C_ESEGUR
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="text-right">
+                            <div class="btn-group">
+                                <button class="btn-white btn btn-xs">Editar</button>
+                                <button class="btn-white btn btn-xs">Eliminar</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            4947332
+                        </td>
+                        <td>
+                            15.160.423-3
+                        </td>
+                        <td>
+                            VILLALOBOS CONTRERAS, LUIS HERNÁN
+                        </td>
+                        </td>
+                        <td>
+                            <span class="label label-warning">Eliminada</span>
+                        </td>
+                        <td>
+                            18-12-2017
+                        </td>
+                        <td>
+                            C_ESEGUR
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="text-right">
+                            <div class="btn-group">
+                                <button class="btn-white btn btn-xs">Editar</button>
+                                <button class="btn-white btn btn-xs">Eliminar</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            4947432
+                        </td>
+                        <td>
+                            15.160.423-4
+                        </td>
+                        <td>
+                            VILLALOBOS CONTRERAS, LUIS HERNÁN
+                        </td>
+                        </td>
+                        <td>
+                            <span class="label label-primary">En Proceso</span>
+                        </td>
+                        <td>
+                            18-12-2017
+                        </td>
+                        <td>
+                            C_ESEGUR
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="text-right">
+                            <div class="btn-group">
+                                <button class="btn-white btn btn-xs">Editar</button>
+                                <button class="btn-white btn btn-xs">Eliminar</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            4947532
+                        </td>
+                        <td>
+                            15.160.423-5
+                        </td>
+                        <td>
+                            VILLALOBOS CONTRERAS, LUIS HERNÁN
+                        </td>
+                        </td>
+                        <td>
+                            <span class="label label-primary">En Proceso</span>
+                        </td>
+                        <td>
+                            18-12-2017
+                        </td>
+                        <td>
+                            C_ESEGUR
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="text-right">
+                            <div class="btn-group">
+                                <button class="btn-white btn btn-xs">Editar</button>
+                                <button class="btn-white btn btn-xs">Eliminar</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            4947632
+                        </td>
+                        <td>
+                            15.160.423-6
+                        </td>
+                        <td>
+                            VILLALOBOS CONTRERAS, LUIS HERNÁN
+                        </td>
+                        </td>
+                        <td>
+                            <span class="label label-primary">En Proceso</span>
+                        </td>
+                        <td>
+                            18-12-2017
+                        </td>
+                        <td>
+                            C_ESEGUR
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="text-right">
+                            <div class="btn-group">
+                                <button class="btn-white btn btn-xs">Editar</button>
+                                <button class="btn-white btn btn-xs">Eliminar</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            4947732
+                        </td>
+                        <td>
+                            15.160.423-7
+                        </td>
+                        <td>
+                            VILLALOBOS CONTRERAS, LUIS HERNÁN
+                        </td>
+                        </td>
+                        <td>
+                            <span class="label label-primary">En Proceso</span>
+                        </td>
+                        <td>
+                            18-12-2017
+                        </td>
+                        <td>
+                            C_ESEGUR
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="text-right">
+                            <div class="btn-group">
+                                <button class="btn-white btn btn-xs">Editar</button>
+                                <button class="btn-white btn btn-xs">Eliminar</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            4947832
+                        </td>
+                        <td>
+                            15.160.423-8
+                        </td>
+                        <td>
+                            VILLALOBOS CONTRERAS, LUIS HERNÁN
+                        </td>
+                        </td>
+                        <td>
+                            <span class="label label-primary">En Proceso</span>
+                        </td>
+                        <td>
+                            18-12-2017
+                        </td>
+                        <td>
+                            C_ESEGUR
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="text-right">
+                            <div class="btn-group">
+                                <button class="btn-white btn btn-xs">Editar</button>
+                                <button class="btn-white btn btn-xs">Eliminar</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            4947932
+                        </td>
+                        <td>
+                            15.160.423-9
+                        </td>
+                        <td>
+                            VILLALOBOS CONTRERAS, LUIS HERNÁN
+                        </td>
+                        </td>
+                        <td>
+                            <span class="label label-blue">Todas</span>
+                        </td>
+                        <td>
+                            18-12-2017
+                        </td>
+                        <td>
+                            C_ESEGUR
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="text-right">
+                            <div class="btn-group">
+                                <button class="btn-white btn btn-xs">Editar</button>
+                                <button class="btn-white btn btn-xs">Eliminar</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            49471320
+                        </td>
+                        <td>
+                            15.160.423-K
+                        </td>
+                        <td>
+                            VILLALOBOS CONTRERAS, LUIS HERNÁN
+                        </td>
+                        </td>
+                        <td>
+                            <span class="label label-blue">Todas</span>
+                        </td>
+                        <td>
+                            18-12-2017
+                        </td>
+                        <td>
+                            C_ESEGUR
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="text-right">
+                            <div class="btn-group">
+                                <button class="btn-white btn btn-xs">Editar</button>
+                                <button class="btn-white btn btn-xs">Eliminar</button>
+                            </div>
+                        </td>
+                    </tr>
+
+
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <td colspan="6">
+                            <ul class="pagination pull-right"></ul>
+                        </td>
+                    </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+var editor;
+
+$(function() {
+
+    $('.footable').footable();
+
+});
+
+</script>
